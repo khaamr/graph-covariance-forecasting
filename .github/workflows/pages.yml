@@ -6,7 +6,8 @@ on:
     paths:
       - index.html
       - research_dashboard.html
-      - previews/**
+      - assets/**
+      - figures/**
       - docs/images/**
       - covariance_replication/docs/**
       - .github/workflows/pages.yml
@@ -35,7 +36,8 @@ jobs:
           mkdir -p _site/docs _site/covariance_replication/docs
           cp index.html research_dashboard.html _site/
           cp -R docs/images _site/docs/
-          cp -R previews _site/
+          cp -R assets _site/
+          cp -R figures _site/
           find covariance_replication/docs -maxdepth 1 -type f \( -name '*.png' -o -name '*.svg' \) -exec cp {} _site/covariance_replication/docs/ \;
       - uses: actions/upload-pages-artifact@v3
         with:

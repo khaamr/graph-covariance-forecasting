@@ -4,7 +4,7 @@ This repository contains an adapted public-data replication of *Graph-based meth
 
 The public experiment uses a different data feed and trading calendar from the paper's licensed LOBSTER sample. It reproduces the forecasting methodology with documented adaptations; it does not reproduce the original numerical benchmark or establish the paper's full model ranking and portfolio advantage. See the [protocol audit](covariance_replication/docs/protocol-audit.md) and [comparison with the published results](covariance_replication/docs/result-comparison.md).
 
-[Project website](https://khaamr.github.io/graph-covariance-forecasting/) | [Interactive figures](https://khaamr.github.io/graph-covariance-forecasting/research_dashboard.html) | [Graph explanation](https://khaamr.github.io/graph-covariance-forecasting/previews/graph-explainer.html)
+[Project website](https://khaamr.github.io/graph-covariance-forecasting/) | [Interactive figures](https://khaamr.github.io/graph-covariance-forecasting/research_dashboard.html) | [Graph explanation](https://khaamr.github.io/graph-covariance-forecasting/#learn)
 
 ## Empirical results
 

@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 data/
 results/
+
+# Local design references and preview copies; the published site is at the root.
+/new graph cov/
+/new site/
