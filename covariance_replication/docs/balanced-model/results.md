@@ -17,7 +17,7 @@ All comparisons use the same raw covariance targets, open-to-close returns and e
 | Equal log/ridge pool | 0.974604 | 0.972241 | 0.988069 | 9.670007 |
 | Selected balanced model | **0.973199** | **0.970572** | **0.988102** | **9.511277** |
 
-The selected model improves all four later-period point estimates versus the earlier five-expert pool. The Log/Fisher model retains slightly better distance losses, and the ridge model retains lower QLIKE. There is no claim of dominance over every control.
+The selected model improves all four later-period point estimates versus the earlier five-expert pool. The Log/Fisher model retains lower Frobenius loss, and the ridge model retains lower QLIKE. There is no claim of dominance over every control.
 
 | Period | Dates | Euclidean ratio | Frobenius ratio | QLIKE ratio | HAR-DRD risk (%) | Selected risk (%) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |

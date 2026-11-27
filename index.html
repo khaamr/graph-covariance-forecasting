@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>new graph cov — Graph Covariance Forecasting</title><meta content="A visual guide to graph covariance forecasting, with the complete methodology, mathematical guarantees and public benchmark results." name="description"/><link href="assets/site.css" rel="stylesheet"/><link href="assets/vendor/katex.min.css" rel="stylesheet"/><script defer="" src="assets/vendor/katex.min.js"></script><script defer="" src="assets/vendor/auto-render.min.js"></script><link href="assets/refinements.css" rel="stylesheet"/><link href="assets/story-dynamics.css" rel="stylesheet"/><link href="assets/network-dynamics.css" rel="stylesheet"/><link href="assets/desktop-polish.css" rel="stylesheet"/></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav-inner"><a class="nav-brand" href="#top">new graph cov<span class="brand-dot"></span></a><button aria-controls="site-navigation" aria-expanded="false" class="menu-toggle">Menu</button><nav aria-label="Main navigation" id="site-navigation"><a href="#learn">Explanation</a><a href="#algorithm">Methodology</a><a href="#replication">Replication</a><a href="#extensions">Extensions</a><a href="#theory">Theory</a><a href="#reproduce">Reproduce</a></nav><a class="btn btn-primary nav-result" href="#results">View results</a></div><div aria-hidden="true" class="reading-progress"><span></span></div></header><main id="main"><section class="hero container" id="top">
-<div class="hero-intro"><div class="hero-lead"><h1>Forecast how<br/>stocks move.<br/><span>Together.</span></h1><div class="hero-copy"><p>Public-data replication of graph-based realized covariance forecasting, with adaptive covariance-shape and geometric spectral extensions. Forecasts are evaluated using matrix loss and minimum-variance portfolio risk.</p><div class="btn-group"><a class="btn btn-primary" href="#results">Read the findings</a><a class="btn btn-outline" href="#learn">Explore the mechanism</a></div><p class="hero-note">27 stocks, 13 reference specifications, 3 horizons</p></div></div><div class="hero-mechanism"><div class="mechanism-top"><span>One stock. A network of context.</span><button aria-label="Pause graph animation" aria-pressed="false" id="hero-pause"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="16"><path d="M9 5v14M15 5v14"></path></svg></button></div><svg aria-label="Illustrative stock network connecting six stock signals with a covariance matrix" id="hero-graph" role="img" viewbox="0 0 560 380"></svg><div class="mechanism-bottom"><span>Stocks <span class="path-divider">/</span> Relationships <span class="path-divider">/</span> Covariance</span><a href="#learn">Explore the mechanism</a></div><p class="illustrative-note">Six-stock illustration, not empirical forecasts</p></div></div><nav aria-label="Choose a reading path" class="reading-routes"><a href="#results"><strong>Read the findings</strong><span>Compare accuracy, risk, and uncertainty</span></a><a href="#learn"><strong>Understand the mechanism</strong><span>Three demonstrations, six guided steps</span></a><a href="#graph-dynamics"><strong>Inspect the study-scale operator</strong><span>27 stocks and 351 stock pairs</span></a></nav>
-<div class="benchmark-shell results-preview"><div class="benchmark-panel"><div class="panel-top"><div aria-label="Benchmark summary" class="segmented" role="tablist"><button aria-controls="benchmark-content" aria-selected="true" data-benchmark="replication" id="tab-replication" role="tab">Replication</button><button aria-controls="benchmark-content" aria-selected="false" data-benchmark="spectral" id="tab-spectral" role="tab" tabindex="-1">Spectral extension</button></div><span id="benchmark-period">623 one-session forecasts, 2022–2024</span></div>
-<div aria-labelledby="tab-replication" class="benchmark-body" id="benchmark-content" role="tabpanel" tabindex="0"><div><p class="comparison" id="benchmark-reference">GHAR(GL,L) vs. HAR-DRD</p><h2 id="benchmark-headline">Short-horizon gains.<br/>A different long-run picture.</h2><p id="benchmark-description">Euclidean loss falls at 1 and 5 sessions. At 22 sessions, Frobenius loss rises. The full model ranking and portfolio advantage did not replicate.</p><a class="text-link" href="#replication" id="benchmark-link">Read the replication</a></div><div aria-label="Forecast loss changes" class="loss-chart" id="loss-chart"><div class="chart-key">Change in forecast loss, lower is better</div><div class="chart-row"><span>1-session, Euclidean</span><div class="bar-track"><div class="bar" style="width:55%"></div></div><strong>−1.65%</strong></div><div class="chart-row"><span>5-session, Euclidean</span><div class="bar-track"><div class="bar" style="width:87%"></div></div><strong>−2.60%</strong></div><div class="chart-row"><span>22-session, Frobenius</span><div class="bar-track"><div class="bar adverse" style="width:15%"></div></div><strong>+0.45%</strong></div></div></div>
-<div class="panel-foot"><span>Public inputs. Reproducible pipeline.</span><span id="benchmark-caveat">Forecast accuracy and portfolio risk are separate outcomes.</span></div></div></div>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>new graph cov — Graph Covariance Forecasting</title><meta content="Graph covariance forecasting with a balanced log-ridge extension, current public-data results, methods and reproduction code." name="description"/><link href="assets/site.css" rel="stylesheet"/><link href="assets/vendor/katex.min.css" rel="stylesheet"/><script defer="" src="assets/vendor/katex.min.js"></script><script defer="" src="assets/vendor/auto-render.min.js"></script><link href="assets/refinements.css" rel="stylesheet"/><link href="assets/story-dynamics.css" rel="stylesheet"/><link href="assets/network-dynamics.css" rel="stylesheet"/><link href="assets/desktop-polish.css" rel="stylesheet"/></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav-inner"><a class="nav-brand" href="#top">new graph cov<span class="brand-dot"></span></a><button aria-controls="site-navigation" aria-expanded="false" class="menu-toggle">Menu</button><nav aria-label="Main navigation" id="site-navigation"><a href="#learn">Explanation</a><a href="#algorithm">Methodology</a><a href="#replication">Replication</a><a href="#extensions">Extensions</a><a href="#theory">Theory</a><a href="#reproduce">Reproduce</a></nav><a class="btn btn-primary nav-result" href="#results">View results</a></div><div aria-hidden="true" class="reading-progress"><span></span></div></header><main id="main"><section class="hero container" id="top">
+<div class="hero-intro"><div class="hero-lead"><h1>Forecast how<br/>stocks move.<br/><span>Together.</span></h1><div class="hero-copy"><p>Graph-based covariance forecasting with a balanced log-ridge extension. On 397 shared dates, the current model reduces all three forecast losses and observed long-only portfolio risk relative to HAR-DRD.</p><div class="btn-group"><a class="btn btn-primary" href="#results">Read the findings</a><a class="btn btn-outline" href="#learn">Explore the mechanism</a></div><p class="hero-note">27 stocks, 397 current evaluation dates, one-session forecasts</p></div></div><div class="hero-mechanism"><div class="mechanism-top"><span>One stock. A network of context.</span><button aria-label="Pause graph animation" aria-pressed="false" id="hero-pause"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="16"><path d="M9 5v14M15 5v14"></path></svg></button></div><svg aria-label="Illustrative stock network connecting six stock signals with a covariance matrix" id="hero-graph" role="img" viewbox="0 0 560 380"></svg><div class="mechanism-bottom"><span>Stocks <span class="path-divider">/</span> Relationships <span class="path-divider">/</span> Covariance</span><a href="#learn">Explore the mechanism</a></div><p class="illustrative-note">Six-stock illustration, not empirical forecasts</p></div></div><nav aria-label="Choose a reading path" class="reading-routes"><a href="#results"><strong>Read the findings</strong><span>Compare accuracy, risk, and uncertainty</span></a><a href="#learn"><strong>Understand the mechanism</strong><span>Three demonstrations, six guided steps</span></a><a href="#graph-dynamics"><strong>Inspect the study-scale operator</strong><span>27 stocks and 351 stock pairs</span></a></nav>
+<div class="benchmark-shell results-preview"><div class="benchmark-panel"><div class="panel-top"><div aria-label="Benchmark summary" class="segmented" role="tablist"><button aria-controls="benchmark-content" aria-selected="true" data-benchmark="balanced" id="tab-balanced" role="tab">Current model</button><button aria-controls="benchmark-content" aria-selected="false" data-benchmark="replication" id="tab-replication" role="tab" tabindex="-1">Original backtest</button></div><span id="benchmark-period">397 shared dates, 2025–Oct 2026</span></div>
+<div aria-labelledby="tab-balanced" class="benchmark-body" id="benchmark-content" role="tabpanel" tabindex="0"><div><p class="comparison" id="benchmark-reference">Balanced log-ridge vs. HAR-DRD</p><h2 id="benchmark-headline">Lower forecast losses<br/>and observed portfolio risk.</h2><p id="benchmark-description">Loss reductions are similar in direction and approximate size to the paper. Annualized long-only risk falls from 9.722% to 9.511%, before costs. Its paired interval includes zero.</p><a class="text-link" href="#results" id="benchmark-link">Read the current results</a></div><div aria-label="Forecast loss changes" class="loss-chart" id="loss-chart"><div class="chart-key">Change in forecast loss, lower is better</div><div class="chart-row"><span>Euclidean loss</span><div class="bar-track"><div class="bar" style="width:89%"></div></div><strong>−2.68%</strong></div><div class="chart-row"><span>Frobenius loss</span><div class="bar-track"><div class="bar" style="width:98%"></div></div><strong>−2.94%</strong></div><div class="chart-row"><span>QLIKE loss</span><div class="bar-track"><div class="bar" style="width:40%"></div></div><strong>−1.19%</strong></div></div></div>
+<div class="panel-foot"><span>Public inputs. Reproducible pipeline.</span><span id="benchmark-caveat">Retrospective selection; the risk advantage remains uncertain.</span></div></div></div>
 </section><section id="results">
 <div class="container">
 <div class="section-header">
-<h2>Comprehensive Benchmark Comparison</h2>
-<p>All models evaluated on the same 443 one-session origins in the 2025–October 2026 reused benchmark. No universal best model exists across all objectives.</p>
+<h2>Current model results</h2>
+<p>On 397 shared forecast dates, the stress-reconciled log-ridge model lowers Euclidean, Frobenius and QLIKE losses by 2.68%, 2.94% and 1.19% relative to HAR-DRD. Annualized long-only risk falls from 9.722% to 9.511%.</p>
+</div>
+<p class="table-reading-note">One-session forecasts for 27 stocks, 2 January 2025–19 October 2026. Loss ratios use HAR-DRD as denominator; lower is better. Risk is annualized standard deviation of open-to-close portfolio returns, before transaction costs.</p>
+<p class="assessment-note">Every row uses identical dates, raw covariance targets and long-only portfolio constraints. The current model was selected retrospectively on a reused benchmark. It has the lowest Euclidean loss and risk among these controls; other models have lower Frobenius or QLIKE loss.</p>
+<div aria-label="Current 397-date benchmark: forecast losses and annualized portfolio risk" class="table-wrap" role="region" tabindex="0">
+<table id="benchmark-comparison"><caption class="sr-only">Current benchmark, 397 shared dates from 2025 to October 2026</caption>
+<thead><tr><th scope="col">Model</th><th scope="col">Euclidean Ratio</th><th scope="col">Frobenius Ratio</th><th scope="col">QLIKE Ratio</th><th scope="col">Annual Risk (%)</th><th scope="col">Assessment</th></tr></thead>
+<tbody>
+<tr><th scope="row">HAR-DRD</th><td>1.000000</td><td>1.000000</td><td>1.000000</td><td>9.721778</td><td><span class="badge badge-amber">Reference</span></td></tr>
+<tr><th scope="row">Five-expert uniform pool</th><td>0.987767</td><td>0.987351</td><td>0.996494</td><td>9.673684</td><td><span class="badge badge-amber">First version</span></td></tr>
+<tr><th scope="row">Log/Fisher GHAR(GL,L)</th><td>0.973542</td><td class="best">0.968018</td><td>0.998614</td><td>9.660256</td><td><span class="badge badge-amber">Lowest Frobenius</span></td></tr>
+<tr><th scope="row">Ridge log-HAR + graph correlation</th><td>0.987367</td><td>0.986161</td><td class="best">0.984146</td><td>9.735293</td><td><span class="badge badge-amber">Lowest QLIKE</span></td></tr>
+<tr><th scope="row">Equal log/ridge pool</th><td>0.974604</td><td>0.972241</td><td>0.988069</td><td>9.670007</td><td><span class="badge badge-amber">Before stress adjustment</span></td></tr>
+<tr class="highlight-row"><th scope="row">Stress-reconciled log-ridge</th><td class="best">0.973199</td><td>0.970572</td><td>0.988102</td><td class="best">9.511277</td><td><span class="badge badge-amber">Current model</span></td></tr>
+</tbody></table></div>
+<p class="table-reading-note">In development 2024, all four point estimates also improve against HAR-DRD. Annual risk is 7.4118%, compared with 7.4196% for HAR-DRD. The 245 development dates and 397 later dates have both been used in model research.</p>
+
+<h3 style="margin:48px 0 20px">Paired uncertainty versus HAR-DRD</h3>
+<div aria-label="Current model: paired loss and portfolio-variance intervals" class="table-wrap" role="region" tabindex="0">
+<table id="paired-intervals"><caption class="sr-only">Exploratory paired stationary-bootstrap intervals on the 397 later dates</caption>
+<thead><tr><th scope="col">Endpoint</th><th scope="col">Change (%)</th><th scope="col">95% interval</th></tr></thead>
+<tbody>
+<tr><th scope="row">Euclidean</th><td>-2.6801</td><td>[-5.4413, -0.4346]</td></tr>
+<tr><th scope="row">Frobenius</th><td>-2.9428</td><td>[-5.7821, -0.6910]</td></tr>
+<tr><th scope="row">QLIKE</th><td>-1.1898</td><td>[-1.8217, -0.6801]</td></tr>
+<tr><th scope="row">Long-only portfolio variance</th><td>-4.2836</td><td>[-7.5395, +0.7367]</td></tr>
+</tbody></table></div>
+<p class="table-reading-note">The three loss intervals are below zero. The portfolio-variance interval includes zero, so the risk advantage remains uncertain. These intervals use 10,000 stationary-bootstrap draws and mean block length 10; they do not adjust for the full model search.</p>
+
+<h3 style="margin:48px 0 20px">Comparison with the paper</h3>
+<div aria-label="Loss reductions relative to each study's HAR-DRD reference" class="table-wrap" role="region" tabindex="0">
+<table id="paper-current-comparison"><caption class="sr-only">One-session loss reductions in the paper and current public-data extension</caption>
+<thead><tr><th scope="col">Loss reduction vs HAR-DRD</th><th scope="col">Paper: GHAR(GL,L)</th><th scope="col">Current extension</th></tr></thead>
+<tbody>
+<tr><th scope="row">Euclidean</th><td>2.50%</td><td>2.68%</td></tr>
+<tr><th scope="row">Frobenius</th><td>2.50%</td><td>2.94%</td></tr>
+<tr><th scope="row">QLIKE</th><td>1.80%</td><td>1.19%</td></tr>
+</tbody></table></div>
+<p class="table-reading-note">The loss reductions are similar in direction and approximate size. The paper evaluates GHAR on LOBSTER quotes in 2011–2021; this extension uses public trade bars, different dates and a different forecast architecture. The comparison supports similar empirical performance, not numerical reproduction or the same model-confidence-set ranking. <a class="text-link" href="https://doi.org/10.1093/jjfinec/nbae026">Original paper</a></p>
+
+<div class="card-grid" style="margin-top:48px">
+<div class="card"><h3>What changed</h3><p>The first version averages five covariance forecasts. The current version combines Log/Fisher GHAR with ridge log-HAR, then uses earlier volatility stress to adjust its desired portfolio. A positive-definite covariance construction preserves the standard long-only optimization problem.</p></div>
+<div class="card"><h3>Compared with the first version</h3><p>On the same later dates, losses fall a further 1.47%, 1.70% and 0.84%. Annual risk falls from 9.674% to 9.511%. In development 2024, risk is slightly higher than the first ensemble's. <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/results.md#difference-from-the-first-version">Read the version comparison</a></p></div>
+<div class="card"><h3>What remains uncertain</h3><p>The candidate was highlighted after checking both evaluation periods. Its risk interval includes zero and turnover rises from 0.3320 to 0.3443 versus the first ensemble. New, uninspected data are needed to confirm an advantage after costs.</p></div>
+</div>
+<p class="table-reading-note"><a class="text-link" href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/results.md">Full results, controls and search record</a></p>
+<details id="earlier-spectral-results" style="margin-top:32px"><summary>Earlier spectral experiment: 443 dates</summary>
+<div class="details-body">
+<div class="section-header">
+<h2>Earlier spectral benchmark</h2>
+<p>These earlier models share 443 one-session origins in the reused 2025–October 2026 sample. Its dates differ from the current 397-date comparison; absolute risks cannot be compared across the two tables.</p>
 </div>
 <p class="table-reading-note">
       Ratios use HAR-DRD as denominator — lower is better. Risk is annualized long-only standard deviation before transaction costs.
     </p><p class="assessment-note">Assessments describe different objectives. “Lowest” refers to models listed in this table; loss ratios and portfolio risk have separate rankings.</p><div aria-label="Shared benchmark: model accuracy and annual portfolio risk; horizontally scrollable" class="table-wrap" role="region" tabindex="0">
-<table id="benchmark-comparison"><caption class="sr-only">Shared benchmark: model accuracy and annual portfolio risk</caption>
+<table id="spectral-comparison"><caption class="sr-only">Shared benchmark: model accuracy and annual portfolio risk</caption>
 <thead><tr><th scope="col">Model</th><th scope="col">Euclidean Ratio</th><th scope="col">Frobenius Ratio</th><th scope="col">QLIKE Ratio</th><th scope="col">Annual Risk (%)</th><th scope="col">Assessment</th></tr></thead>
 <tbody>
 <tr><th scope="row">HAR-DRD</th><td>1.0000</td><td>1.0000</td><td>1.0000</td><td>9.4351</td><td><span class="badge badge-amber">Reference</span></td></tr>
@@ -31,7 +81,7 @@
 </div>
 <h3 style="margin:48px 0 20px;text-align:center">Paired Uncertainty Intervals — Geometric Spectral Gate</h3>
 <div aria-label="Spectral gate: paired Frobenius and portfolio-variance intervals; horizontally scrollable" class="table-wrap" role="region" tabindex="0">
-<table id="paired-intervals"><caption class="sr-only">Spectral gate: paired Frobenius and portfolio-variance intervals</caption>
+<table id="spectral-paired-intervals"><caption class="sr-only">Spectral gate: paired Frobenius and portfolio-variance intervals</caption>
 <thead><tr><th scope="col">Reference</th><th scope="col">Frobenius Change (%)</th><th scope="col">Frobenius 95% CI</th><th scope="col">Variance Change (%)</th><th scope="col">Variance 95% CI</th></tr></thead>
 <tbody>
 <tr><th scope="row">HAR-DRD</th><td class="best">-1.789</td><td>[-2.822, -0.661]</td><td>-0.613</td><td>[-2.149, +0.951]</td></tr>
@@ -59,7 +109,8 @@
 </div>
 </div>
 </div>
-</section><section id="replication">
+</details>
+</div></section><section id="replication">
 <div class="container">
 <div class="section-header">
 <h2>Initial Public Backtest</h2>
@@ -107,8 +158,8 @@
 </section><section id="extensions">
 <div class="container" style="position:relative">
 <div class="section-header">
-<h2>Beyond Replication</h2>
-<p>Two extensions combine covariance experts using online learning on unit-trace shapes or geometric pooling with spectral cleaning.</p>
+<h2>Model extensions</h2>
+<p>The current balanced model combines graph and ridge forecasts with a lagged stress response. Earlier shape and spectral experiments remain available below, with their original results.</p>
 </div>
 <div class="extension-grid">
 <div class="card">
@@ -151,8 +202,8 @@
 <p>Combine three covariance experts with exponential weights under delayed feedback, maintaining positive definiteness and provable regret bounds on unit-trace shape loss.</p>
 </div>
 <div class="card">
-<h3>Geometric Spectral Gate</h3>
-<p>A 175-parameter regime-dependent network that pools five geometric experts, applies learned eigenvalue cleaning, and targets equal-priority accuracy and long-only portfolio risk.</p>
+<h3>Balanced covariance extension</h3>
+<p>Combine Log/Fisher graph and ridge forecasts, measure volatility stress from earlier realized matrices, and construct a positive-definite covariance consistent with the desired long-only allocation.</p>
 </div>
 </div>
 <div style="text-align:center;margin-top:32px">
@@ -249,9 +300,22 @@
 </section><section id="algorithm">
 <div class="container">
 <div class="section-header">
-<h2>How the Forecasting Pipeline Works</h2>
-<p>A step-by-step decomposition of the complete forecasting procedure, from raw synchronized prices to portfolio allocation and loss evaluation.</p>
+<h2>Forecasting methods</h2>
+<p>The current model uses the same realized-covariance panel and graph forecasts as the public-data study. Its additional steps are shown first; the reference method and earlier extensions follow.</p>
 </div>
+<details id="balanced-method" open=""><summary>Current model: four forecasting steps</summary><div class="details-body">
+<ol style="padding-left:24px">
+<li><strong>Combine two forecasts.</strong> Average Log/Fisher GHAR and ridge log-HAR covariance matrices. The ridge penalty and retransformation correction use earlier training labels.</li>
+<li><strong>Estimate a faster covariance.</strong> Smooth earlier realized matrices with an exponential half-life of five retained observations. Compute its long-only minimum-variance portfolio.</li>
+<li><strong>Measure lagged stress.</strong> Divide the previous covariance trace by its past-22-observation mean. As that ratio rises from 1 to 3, move the desired allocation from the base portfolio toward the faster estimate.</li>
+<li><strong>Reconcile the covariance.</strong> Construct a positive-definite matrix whose ordinary long-only optimum is the desired allocation. Evaluate the matrix forecast and portfolio on the same dates as every control.</li>
+</ol>
+<div class="algo-math">$$F_t=\frac{\widehat H_t^{\mathrm{log}}+\widehat H_t^{\mathrm{ridge}}}{2},\qquad b_t=\operatorname{clip}\left(\frac{\log z_t}{\log 3},0,1\right)$$
+$$w_t=(1-b_t)w_F+b_t w_{\mathrm{fast}}$$</div>
+<p>All fitting labels and realized inputs precede the forecast date. This chronology does not remove the effect of selecting the architecture after inspecting the benchmark. The graph correlation operator still covers all 351 stock pairs.</p>
+<p><a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/results.md">Algorithm and complete evaluation</a> / <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/mathematics.md">Covariance construction and proof</a></p>
+</div></details>
+<h3 style="margin-top:32px">Reference method and earlier extensions</h3>
 <div class="pipeline-toolbar"><span>9 steps, from intraday prices to portfolio evaluation</span><button aria-expanded="false" class="btn btn-outline" id="expand-pipeline">Expand all steps</button></div><div class="algo-container">
 <div class="algo-line" id="algo-line"></div>
 <!-- Step 1 -->
@@ -439,16 +503,18 @@
 </section><section id="reproduce">
 <div class="container">
 <div class="section-header">
-<h2>Reproduce the Study</h2>
-<p>Use Python 3.10 or 3.11. The first run caches approximately 0.5 GB of pinned public minute bars.</p>
+<h2>Reproduce the current results</h2>
+<p>Use Python 3.10 or 3.11. The first run caches approximately 0.5 GB of pinned public minute bars. The standalone pipeline rebuilds the selected model without running the unsuccessful challengers.</p>
 </div>
 <div class="card" style="max-width:700px;margin:0 auto">
 <pre style="padding:20px;border-radius:8px;overflow-x:auto;font-size:.88rem;line-height:1.8"><code>git clone https://github.com/khaamr/graph-covariance-forecasting.git
 cd graph-covariance-forecasting/covariance_replication
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m ipykernel install --user --name covariance-har
+python -m pip install -r requirements-published.txt
+python prepare_literature_panel.py --data-dir data/syncster --output results/panel.npz
+python prepare_joint_experts.py --data-dir data/syncster --output-dir results/experts
+python run_balanced_model.py --panel results/panel.npz --experts results/experts/experts.npz --output results/balanced
 python -m unittest discover -s tests -v</code></pre>
 </div>
 <div class="card-grid" style="margin-top:32px">
@@ -464,13 +530,16 @@ python -m unittest discover -s tests -v</code></pre>
 <h3>Data and Figures</h3>
 <p>
 <a href="https://huggingface.co/datasets/syncster-data/historical-market-data/tree/eff0dac55d843b3b83caec819efa213021a3e3e5">Pinned Public Data</a><br/>
-<a href="research_dashboard.html">Interactive Figure Gallery</a><br/>
+<a href="research_dashboard.html">Earlier Experiment Figures</a><br/>
 <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/figures/README.md">Figure Inventory</a>
 </p>
 </div>
 <div class="card">
 <h3>Documentation</h3>
 <p>
+<a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/results.md">Current Results and Version Comparison</a><br/>
+<a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/balanced-model/mathematics.md">Current Model Proof</a><br/>
+<a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/balanced_covariance.py">Direct Forecast API</a><br/>
 <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/theory.md">Mathematical Proofs</a><br/>
 <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/protocol-audit.md">Protocol Audit</a><br/>
 <a href="https://github.com/khaamr/graph-covariance-forecasting/blob/main/covariance_replication/docs/result-comparison.md">Paper vs Public Comparison</a>
@@ -485,7 +554,8 @@ python -m unittest discover -s tests -v</code></pre>
 <li><strong>Original inputs:</strong> Licensed LOBSTER quotes, supported through the documented local-data adapter.</li>
 <li><strong>Calendar:</strong> Strict shared-session screening removes dates, especially before 2022.</li>
 <li><strong>Calibration:</strong> The initial 1,000-observation window spans more than six calendar years.</li>
-<li><strong>Evaluation:</strong> Portfolio returns are open-to-close and exclude transaction costs. The spectral benchmark is reused.</li>
+<li><strong>Evaluation:</strong> Portfolio returns are open-to-close and exclude transaction costs. The current model uses 245 development dates in 2024 and 397 later dates in 2025–2026; both periods have been inspected during research.</li>
+<li><strong>Selection:</strong> The architecture was chosen retrospectively. The risk interval includes zero, and the reported intervals do not adjust for the full model search.</li>
 </ul>
 </div>
 </details>
