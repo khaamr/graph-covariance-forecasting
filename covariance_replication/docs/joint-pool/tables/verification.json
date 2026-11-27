@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-27",
+  "relevant_tests_passed": 44,
+  "expert_origins": 1020,
+  "evaluation_origins": 642,
+  "quarterly_refits": 12,
+  "last_labels_predate_forecasts": true,
+  "fitting_labels_predate_validation": true,
+  "positive_definiteness_checked_all_outputs": true,
+  "fixed_ensemble_matches_independent_average": true,
+  "joint_primary_success": false,
+  "uniform_control_all_four_point_improvements_each_period": true,
+  "uniform_control_all_four_significant_improvements": false,
+  "qualification": "Control comparisons exploratory on reused retrospective dates; no parameter retuning after fixed evaluation.",
+  "final_source_sha256": {
+    "models.py": "494cd1694f7d4fe4235606f5078aa8b718867e976885404e42e396a0cc497e97",
+    "joint_pool.py": "0798ccba84e0d8be3e2152c4da6452323fcaccac9d92c9cef1205aa693a69413",
+    "prepare_joint_experts.py": "318ec9aa58028ee62fd7bc1d1c3eb5d55cb3a3cfa6abe5f054b9eddc4f702f39",
+    "run_joint_pool.py": "b454921a06827577a072bcc8d06d2730ef253b4d393e4e0059c4473b59c909c6",
+    "tests/test_joint_pool.py": "2c440a6e07e6dcd08fdf1176efa44af4d0cb11ca91522f3623f9cd609914024f"
+  },
+  "direct_ensemble_API_checked_origins": 642,
+  "direct_ensemble_API_matches_evaluated_forecasts_exactly": true,
+  "direct_ensemble_API_invalid_inputs_rejected": true,
+  "reporting_note": "Exploratory control intervals added to runner after fixed candidate evaluation; no forecast parameters retuned."
+}

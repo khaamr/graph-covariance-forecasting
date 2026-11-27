@@ -1,6 +1,6 @@
 # Graph-based realized covariance forecasting
 
-This repository contains an adapted public-data replication of *Graph-based methods for forecasting realized covariances* by [Zhang, Pu, Cucuringu and Dong](https://doi.org/10.1093/jjfinec/nbae026), together with adaptive covariance-shape and geometric spectral extensions. The reference experiment evaluates 13 specifications for 27 stocks at horizons of 1, 5 and 22 retained trading sessions.
+This repository contains an adapted public-data replication of *Graph-based methods for forecasting realized covariances* by [Zhang, Pu, Cucuringu and Dong](https://doi.org/10.1093/jjfinec/nbae026), together with fixed covariance ensembles, adaptive covariance-shape and geometric spectral extensions. The reference experiment evaluates 13 specifications for 27 stocks at horizons of 1, 5 and 22 retained trading sessions.
 
 The public experiment uses a different data feed and trading calendar from the paper's licensed LOBSTER sample. It reproduces the forecasting methodology with documented adaptations; it does not reproduce the original numerical benchmark or establish the paper's full model ranking and portfolio advantage. See the [protocol audit](covariance_replication/docs/protocol-audit.md) and [comparison with the published results](covariance_replication/docs/result-comparison.md).
 
@@ -15,6 +15,12 @@ Relative to HAR-DRD, GHAR(GL,L) reduced Euclidean loss by 1.65% at one session a
 ### Spectral extension
 
 Across 443 shared forecast dates in the reused 2025 to October 2026 benchmark, the spectral gate reduced Frobenius loss by 1.79% relative to HAR-DRD. Annualized long-only risk decreased from 9.435% to 9.406% before transaction costs. The paired risk interval included zero, so the comparison does not establish a joint improvement in forecast accuracy and portfolio risk. See the [spectral results and paired intervals](covariance_replication/docs/spectral/results.md).
+
+### Fixed covariance ensemble
+
+The equal-weight pool of five causal covariance forecasts lowered mean Euclidean, Frobenius and QLIKE losses by **1.22%, 1.26% and 0.35%**, respectively, against HAR-DRD on 397 common dates in the reused 2025–2026 evaluation. Annualized long-only risk fell from **9.72% to 9.67%**. QLIKE and risk confidence intervals include zero improvement, so the result does not establish joint statistical superiority. The separately trained selector increased risk and is retained in the comparison.
+
+This is an experimental ensemble extension with a stricter calendar screen, rather than a replacement for the original replication. Its dates differ from the 443-date spectral benchmark above. See the [fixed protocol, controls and paired intervals](covariance_replication/docs/joint-pool/results.md), [direct ensemble implementation](covariance_replication/joint_pool.py), and [GLASSO penalty diagnostic](covariance_replication/docs/glasso-diagnostic.md).
 
 ## Notebooks
 

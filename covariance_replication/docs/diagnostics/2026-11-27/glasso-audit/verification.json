@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-27",
+  "variants_completed": 6,
+  "folds_checked": 179,
+  "origins_each": 623,
+  "default_model_sha256": "81e71003c5617fced021a8ccb058130770da214fc6c310d4717ef7767097f3bb",
+  "default_estimator_trace_matches_production": true,
+  "monthly_non_graph_control_predictions_match": true,
+  "all_graph_windows_have_1000_rows": true,
+  "all_graph_and_target_cutoffs_past_only": true,
+  "Cholesky_best_distance_model_all_variants": true,
+  "graph_excluded_distance_MCS_all_variants": true,
+  "max_alpha_difference_author_call_vs_current_return_units": 3.885780586188048e-16,
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4"
+  }
+}

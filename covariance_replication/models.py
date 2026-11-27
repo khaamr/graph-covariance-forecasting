@@ -49,7 +49,7 @@ def normalized_graph(adjacency):
     return scale[:, None] * adjacency * scale[None, :]
 
 
-def precision_graph(returns):
+def precision_graph(returns, *, alphas=4):
     """
     Fit the sparse graph using only returns before the first forecast origin.
     """
@@ -57,7 +57,7 @@ def precision_graph(returns):
     samples = returns / scale
     with catch_warnings(record=True) as cv_warnings:
         simplefilter("always")
-        search = GraphicalLassoCV(cv=5, n_jobs=1, max_iter=180).fit(samples)
+        search = GraphicalLassoCV(alphas=alphas, cv=5, n_jobs=1, max_iter=180).fit(samples)
     sample_cov = np.cov(samples, rowvar=False, ddof=0)
     np.fill_diagonal(sample_cov, 0)
     diagonal_penalty = np.abs(sample_cov).max() * (1 + 1e-6)
@@ -191,6 +191,7 @@ def forecast_grid(
     panel, horizons=(1, 5, 22), lookback=1000, first_forecast=None,
     quarticity=False, quarticity_power=1.0, intercept_mode="series",
     reference_calendar=None, transformation="levels", graph_effect="all", refit_every=None,
+    glasso_alphas=4,
 ):
     """
     Fit monthly folds, purging incomplete labels. With a reference calendar,
@@ -200,6 +201,8 @@ def forecast_grid(
     direct exp/tanh inverses; the manuscript does not specify a bias correction.
     refit_every counts retained sessions, anchored to the common first test date.
     """
+    if not isinstance(glasso_alphas, int) or isinstance(glasso_alphas, bool) or glasso_alphas < 2:
+        raise ValueError("glasso_alphas must be an integer of at least two.")
     if transformation not in ("levels", "log_fisher"):
         raise ValueError("Choose levels or log_fisher transformations.")
     if graph_effect not in ("all", "daily"):
@@ -270,7 +273,8 @@ def forecast_grid(
         origin = month_test[0]
         month = month_index[origin]
         start = origin - lookback
-        graph, alpha, warnings, fallback = precision_graph(panel.graph_return[start:origin])
+        graph_options = {} if glasso_alphas == 4 else {"alphas": glasso_alphas}
+        graph, alpha, warnings, fallback = precision_graph(panel.graph_return[start:origin], **graph_options)
         graphs = base_graphs | {"GL": normalized_graph(graph)}
         day_slice = slice(start, month_test[-1] + 1)
         monthly_var = {
@@ -336,6 +340,7 @@ def forecast_grid(
                 "transformation": transformation, "graph_effect": graph_effect,
                 "refit_every": refit_every if refit_every is not None else "calendar month",
                 "glasso_edges": int(graph.sum() // 2), "glasso_alpha": alpha,
+                "glasso_cv_alphas": glasso_alphas,
                 "glasso_cv_warnings": warnings, "penalty_increased": fallback,
                 "correlation_repairs": repairs,
             })

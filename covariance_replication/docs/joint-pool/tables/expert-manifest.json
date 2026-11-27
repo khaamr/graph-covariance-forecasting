@@ -1,0 +1,43 @@
+{
+  "dataset_revision": "eff0dac55d843b3b83caec819efa213021a3e3e5",
+  "origins": 1020,
+  "first_forecast": "2022-07-01",
+  "last_forecast": "2026-10-19",
+  "graph_alphas": 12,
+  "calendar": "complete lag windows relative to screened SPY input",
+  "data_sha256": {
+    "AAPL.parquet": "4097e799ce9159614b5e727479d160b7358f12ed9cad6691841d3e43350d7b94",
+    "AMGN.parquet": "c0cf329e3daa482ad768aef22bfde6d399b500c63a0964a20fd587e2a8cf36df",
+    "AXP.parquet": "6a86d615f8aeb39d0019bcf150e5b4b799e974b1a13aea5d122522da31062f94",
+    "BA.parquet": "d18500ce45d4c9aef1d85567634fa41fd79a690ff1eba8384173139536a8ec3f",
+    "CAT.parquet": "3ca35f655e29e198325f7692ccc1306473eb0fc78e6e9ec7ec5310b6ad1675a5",
+    "CRM.parquet": "79bbb30383bcb8aa6663e8241a9de3d044db4a44ad11cde541f35652d1705b3c",
+    "CSCO.parquet": "9d3dfb024530de337c43d32a5cea9bd815fe76d0d4738bf95405ec550a3b9290",
+    "CVX.parquet": "fb2cb1b53715473e25f2c8fcf97e198ab9ef827c525bac9b86f49b3b5d4ec571",
+    "DIS.parquet": "06ae9516672220eeacc476690b5dc8c6a0b2bffbd53745f03732b8775e28db15",
+    "GS.parquet": "3f6f97458c36fe803f47045ae885654fef134ed5920fe8d801d59eafe6e6a15f",
+    "HD.parquet": "6cd06911bdf010373043d9c2890abb03317f50689a4315f1b4b9a37eb5c822f9",
+    "HON.parquet": "4fc5db494c50a5e7004666d9ec9bca9a70d766ab237b54b4a5380546a17cfaaa",
+    "IBM.parquet": "9ced018abfae6f09ca1590832168ef8f15d02de4d462049e4f76324b2a1e5399",
+    "INTC.parquet": "6cf7b6f423c659e47367a6093a6cc65d12f858f6498af94c7dde76b0f4917998",
+    "JNJ.parquet": "368362e1637af14d03636ebcfc350e99ec9100d5dbebfbd38a21aa747b243200",
+    "JPM.parquet": "05fcc627a4b8e29bc48ef3dce65c6a6f904bae91eb8f942bfa5e527088f18903",
+    "KO.parquet": "d99d9e582253ffdfb60e1236ad201b4374215f2cfb0181d550b447e080d6e86b",
+    "MCD.parquet": "9555a02742928c1aad511e07301d2ce0b1e620aa66c54cec4a68c195e3ed5e8e",
+    "MMM.parquet": "a28c3863c945f7731e70363f0a91bc10e396e60ca5dbac8739320a4f004946d2",
+    "MRK.parquet": "136acb690b0a9e42624d285de0aa34f9a75470651f2d893a5c16b871a6fda5d6",
+    "MSFT.parquet": "557f13473e0bf8be011769abc8e2942dd422334759399da22cfe02a85a9ed106",
+    "NKE.parquet": "a9569380ef3d418cd55bb6d674e0fe38f1bb189b9f8ce0a628f9c9cc0919b726",
+    "PG.parquet": "bec16322df2d193b9f2d0867ef6016c7703570da3e4f5636397d4a246a2b5691",
+    "SPY.parquet": "267e48ab348dcf71003d73247e7ac692c5c73fab176db9bd2248cdd16f0a2f2a",
+    "TRV.parquet": "fce986f05219b6a5aa184f134eb20a8741aa81e2f25537084b49331d2302fa8a",
+    "UNH.parquet": "0ac4b88745eb27c869dd11530e10336b16d0d72586467be8b8c63b8a7ee8f9f2",
+    "VZ.parquet": "b5f1fed2307b754ab511518d435c2b3cc0924b58e3f27bc85128d0603fe06a58",
+    "WMT.parquet": "c1418d50c1479071cf87d480cef0df8558d63c0a2b6374b50e8f52dc4a2bb35f"
+  },
+  "source_sha256": {
+    "models.py": "494cd1694f7d4fe4235606f5078aa8b718867e976885404e42e396a0cc497e97",
+    "market_data.py": "0538ef1c975c4150cd2a8eea7f679ac8d46b455beca42271c6d54d17e289f770",
+    "prepare_joint_experts.py": "318ec9aa58028ee62fd7bc1d1c3eb5d55cb3a3cfa6abe5f054b9eddc4f702f39"
+  }
+}

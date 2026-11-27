@@ -1,0 +1,83 @@
+{
+  "settings": {
+    "current": {
+      "scaled": true,
+      "alphas": 4,
+      "refinements": 4,
+      "iterations": 180,
+      "tol": 0.0001,
+      "enet_tol": 0.0001,
+      "use_cv_precision": false,
+      "refit_every": null
+    },
+    "authors_call_current_runtime": {
+      "scaled": false,
+      "alphas": 4,
+      "refinements": 4,
+      "iterations": 100,
+      "tol": 0.0001,
+      "enet_tol": 0.0001,
+      "use_cv_precision": true,
+      "refit_every": null
+    },
+    "raw_scale_only": {
+      "scaled": false,
+      "alphas": 4,
+      "refinements": 4,
+      "iterations": 180,
+      "tol": 0.0001,
+      "enet_tol": 0.0001,
+      "use_cv_precision": false,
+      "refit_every": null
+    },
+    "denser_cv_grid": {
+      "scaled": true,
+      "alphas": 12,
+      "refinements": 4,
+      "iterations": 180,
+      "tol": 0.0001,
+      "enet_tol": 0.0001,
+      "use_cv_precision": false,
+      "refit_every": null
+    },
+    "tighter_solver": {
+      "scaled": true,
+      "alphas": 4,
+      "refinements": 4,
+      "iterations": 800,
+      "tol": 1e-06,
+      "enet_tol": 1e-08,
+      "use_cv_precision": false,
+      "refit_every": null
+    },
+    "released_22_session_refits": {
+      "scaled": true,
+      "alphas": 4,
+      "refinements": 4,
+      "iterations": 180,
+      "tol": 0.0001,
+      "enet_tol": 0.0001,
+      "use_cv_precision": false,
+      "refit_every": 22
+    }
+  },
+  "input_period": [
+    "2016-01-04",
+    "2024-12-31"
+  ],
+  "first_forecast": "2022-07-01",
+  "lookback": 1000,
+  "horizons": [
+    1
+  ],
+  "MCS_draws": 10000,
+  "MCS_block": 2,
+  "alpha_units": "percentage-log-return squared; scaled penalties multiplied by scale squared",
+  "authors_source": "https://github.com/chaozhang-ox/Graph-based-HAR/blob/751f8f0b400a33e2f2fd01501ffdc42a2315f013/GHAR_Var.py",
+  "scope": "Existing public sample reused; author alpha series unavailable; no exact historical-environment claim.",
+  "source_sha256": {
+    "models.py": "81e71003c5617fced021a8ccb058130770da214fc6c310d4717ef7767097f3bb",
+    "market_data.py": "0538ef1c975c4150cd2a8eea7f679ac8d46b455beca42271c6d54d17e289f770",
+    "audit_glasso.py": "7b673bcb7d96ef989d1f277972a30088cfb418e963df72a081f42a358084959d"
+  }
+}

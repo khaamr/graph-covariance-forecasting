@@ -1,0 +1,10 @@
+{
+  "windows": 30,
+  "independent_fits": 300,
+  "dense_better_windows": 30,
+  "dense_mean_score_gain": 1.2797020625450934,
+  "dense_min_score_gain": 1.1004444079850373,
+  "dense_max_score_gain": 1.4961414373373927,
+  "convergence_warnings": 0,
+  "scoring": "Each penalty fitted independently on identical unshuffled five folds, then scored on held-out returns. Higher log-likelihood is better."
+}

@@ -52,6 +52,16 @@ The [paper 5 review](docs/paper5-review.md) compares the uploaded September 2023
 
 Use `transformation="log_fisher"`, `graph_effect="daily"`, or `refit_every=1` / `5` for separate experiments. Defaults remain the original levels model with all graph lags and monthly refits. `paper5_experiments.py` and `paper5_portfolios.py` reproduce the comparisons; the existing notebook and website results are unchanged.
 
+## GLASSO selection diagnostic
+
+The [GLASSO audit](docs/glasso-diagnostic.md) records penalties, CV curves, graph changes, and exact rolling-window dates. A denser grid finds independently verified better validation likelihoods, but the graph model still does not recover the paper's distance-loss ranking. `audit_glasso.py` and `verify_glasso_penalties.py` reproduce this check without changing forecasting defaults.
+
+## balanced covariance ensemble
+
+The [balanced-model experiment](docs/joint-pool/results.md) adds a fixed equal-weight pool of five causal covariance experts and a separately evaluated learned selector. On 397 common reused 2025–2026 dates, the fixed pool improves all three mean forecast losses and observed long-only risk versus HAR-DRD; QLIKE and risk intervals still include zero. The learned selector fails the joint risk target and is retained in the comparison. This is an ensemble extension, not an exact reproduction of the paper.
+
+`joint_pool.fixed_covariance_pool(expert_bank)` exposes the fixed model directly. `prepare_joint_experts.py` and `run_joint_pool.py` reproduce the fixed protocol and all controls. The graph models can optionally use `glasso_alphas=12`; defaults remain unchanged.
+
 ## extended research
 
 [executed extension](Extended_Covariance.ipynb) · [proofs](docs/theory.md) · [results and use cases](docs/extension-results.md) · [saved tables](docs/tables)
