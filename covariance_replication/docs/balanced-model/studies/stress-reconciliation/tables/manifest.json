@@ -1,0 +1,58 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "primary": {
+      "base": "Equal log-ridge pool",
+      "driver": "Yesterday realized covariance GMV",
+      "gate": "Volatility ratio1to3",
+      "distance": "Gaussian KL"
+    },
+    "bases": [
+      "Log/Fisher GHAR",
+      "Ridge log-HAR",
+      "Equal log-ridge pool"
+    ],
+    "drivers": [
+      "Yesterday realized covariance GMV",
+      "EWMA covariance half-life2",
+      "EWMA covariance half-life5"
+    ],
+    "gates": [
+      "Fixed0.25",
+      "Fixed0.5",
+      "Fixed0.75",
+      "Fixed1",
+      "Volatility ratio1to3",
+      "Volatility ratio1.5to3"
+    ],
+    "matrix_distances": [
+      "Gaussian KL",
+      "Reverse Gaussian KL",
+      "Frobenius"
+    ],
+    "gate_definition": "Previous realized trace / preceding22-session mean trace; beta=clip(log(ratio/lower)/log(3/lower),0,1); all inputs strictly lagged",
+    "selectors": "252 genuinely past outcomes, same3 integrated/return/combined minimax criteria, HAR-DRD fallback",
+    "iteration_rule": "Primary and all variants fixed before stress-family evaluation; retain every failure and report outcome-selected models separately",
+    "evaluation": "Same245 development and397 reused later dates",
+    "qualification": "Retrospective exploratory extension, not independent confirmation or original GHAR numerical reproduction",
+    "bootstrap": {
+      "draws": 10000,
+      "mean_block": 10,
+      "seed": 20261127
+    }
+  },
+  "source_sha256": {
+    "covariance_reconciliation.py": "436c634f54cd1717d11b0044ada79f7d0b56682ea92fa846f130cb70548f97d1",
+    "stress_covariance_reconciliation.py": "e1e50171b527b8199893b5e118874f424743a45f0b5e05b1e00243bcc829d4da",
+    "risk_calibration.py": "40e90b915f2cf20f11a8652c2726c7d22adc71260c8bf0a34ccc62f8661fb88f",
+    "run_risk_calibration.py": "ee8a05a8c0336cfa4d7d72cc0e7cbef4bc8ea4b6fa046574836dae7d93b23c72",
+    "run_stress_reconciliation.py": "6e4dc81219d6ee1dc8ccad78104cd4cacd52500dd1c8b0007201f869347b5d76"
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-joint-pool/experts/experts.npz": "12c6f588b276bab180658c68335a4c06f4408e5750df803ea125af6323ba510e",
+    "/private/tmp/graph-cov-reconciliation/run/forecasts.npz": "6cd94c68f84449b161cf6608d056398a554302cec94e82fa3e1e186acf36d7e3",
+    "/private/tmp/graph-cov-reconciliation/run/portfolio-weights.npz": "4ef739621713fa8edd30552a03836babfba685640a6d118417fb7893bec81a56",
+    "design.json": "f7b57f53149fc2ea97b3ee82b123f2684e51d70b666410a621c8c77d0579d2e2"
+  }
+}

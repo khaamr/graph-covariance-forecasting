@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-27",
+  "primary": "Prequential realized-risk covariance selector",
+  "bases": [
+    "HAR-DRD",
+    "Log/Fisher GHAR",
+    "Ridge log-HAR",
+    "Equal log/ridge pool",
+    "Equal log/ridge/arithmetic pool",
+    "75% log graph +25% arithmetic"
+  ],
+  "calibration": "Past standardized-return covariance estimated with Ledoit-Wolf, full or diagonal covariance mapping",
+  "strengths": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "histories": [
+    252,
+    504
+  ],
+  "scales": [
+    "identity",
+    "training QLIKE optimum clipped to [0.75,1.5]"
+  ],
+  "minimum_calibration_history": 252,
+  "refit": "calendar month",
+  "validation": 126,
+  "primary_selection": "Minimize worst ratio across Euclidean, Frobenius, nonnegative QLIKE divergence, integrated realized portfolio variance, and 1+0.5*(return variance ratio-1), evaluated on genuine past candidate forecasts. Tie-break mean ratio then lower calibration intensity and identity scale. HAR-DRD identity fallback included.",
+  "controls": [
+    "Return-risk-only minimax selector",
+    "Realized-risk-only minimax selector",
+    "Fixed base pools",
+    "All fixed calibrated candidates"
+  ],
+  "evaluation": "Identical 245 development and397 reused later origins; unmodified raw covariance targets and returns",
+  "portfolio": "Active-set exact convex QP for candidate evaluation, relative duality-gap certificate; original CVXPY/OSQP re-evaluation for reported selectors and bases",
+  "bootstrap": {
+    "draws": 10000,
+    "mean_block": 10,
+    "seed": 20261127
+  },
+  "qualification": "All dates reused from earlier research. Retrospective exploration, not independent confirmation. Publish full search and failed selectors. No post-evaluation parameter changes."
+}

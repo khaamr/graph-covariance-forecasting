@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-27",
+  "new_tests_passed": 7,
+  "origins": 642,
+  "later_origins": 397,
+  "models_compared": 24,
+  "heavy_refits": 33,
+  "factor_refits_each_variant": 642,
+  "all_covariances_finite_positive_definite": true,
+  "all_training_labels_strictly_past": true,
+  "heavy_optimizer_failures": 0,
+  "all_new_models_jointly_better_than_har_drd": false,
+  "old_factor_defaults_match_sampled_saved_forecasts_exactly": true,
+  "qualification": "Mechanism-based diagnostic improvements; original methods retained; no all-four winner on reused benchmark."
+}

@@ -1,0 +1,91 @@
+{
+  "author_c_sha256": "f015f7aeebc44f99f1a9c737224224b100d24c66f239a3d342edaa74f6985c4c",
+  "comparisons": [
+    {
+      "assets": 3,
+      "dates": 75,
+      "alpha": 0.03,
+      "beta": 0.95,
+      "absolute_nll_error": 0.0
+    },
+    {
+      "assets": 3,
+      "dates": 75,
+      "alpha": 0.1,
+      "beta": 0.6,
+      "absolute_nll_error": 2.842170943040401e-14
+    },
+    {
+      "assets": 3,
+      "dates": 75,
+      "alpha": 0.0,
+      "beta": 0.9,
+      "absolute_nll_error": 1.1368683772161603e-13
+    },
+    {
+      "assets": 3,
+      "dates": 75,
+      "alpha": 0.2,
+      "beta": 0.0,
+      "absolute_nll_error": 5.684341886080802e-14
+    },
+    {
+      "assets": 9,
+      "dates": 180,
+      "alpha": 0.03,
+      "beta": 0.95,
+      "absolute_nll_error": 1.1368683772161603e-12
+    },
+    {
+      "assets": 9,
+      "dates": 180,
+      "alpha": 0.1,
+      "beta": 0.6,
+      "absolute_nll_error": 5.684341886080801e-13
+    },
+    {
+      "assets": 9,
+      "dates": 180,
+      "alpha": 0.0,
+      "beta": 0.9,
+      "absolute_nll_error": 2.2737367544323206e-13
+    },
+    {
+      "assets": 9,
+      "dates": 180,
+      "alpha": 0.2,
+      "beta": 0.0,
+      "absolute_nll_error": 6.821210263296962e-13
+    },
+    {
+      "assets": 27,
+      "dates": 400,
+      "alpha": 0.03,
+      "beta": 0.95,
+      "absolute_nll_error": 0.0
+    },
+    {
+      "assets": 27,
+      "dates": 400,
+      "alpha": 0.1,
+      "beta": 0.6,
+      "absolute_nll_error": 9.094947017729282e-13
+    },
+    {
+      "assets": 27,
+      "dates": 400,
+      "alpha": 0.0,
+      "beta": 0.9,
+      "absolute_nll_error": 4.320099833421409e-12
+    },
+    {
+      "assets": 27,
+      "dates": 400,
+      "alpha": 0.2,
+      "beta": 0.0,
+      "absolute_nll_error": 3.865352482534945e-12
+    }
+  ],
+  "matched": true,
+  "qualification": "Numerical likelihood-core parity; not a MATLAB end-to-end optimizer comparison."
+}

@@ -1,0 +1,21 @@
+model,endpoint,change_percent,lower_95,upper_95
+Stress Integrated-risk reconciled selector,Euclidean,-2.010470572305656,-4.381345138233771,-0.18489903032239086
+Stress Integrated-risk reconciled selector,Frobenius,-2.2270091116286417,-4.63530322432887,-0.4170106213470013
+Stress Integrated-risk reconciled selector,QLIKE,-1.1327258053555167,-1.842296070226226,-0.5458733360248861
+Stress Integrated-risk reconciled selector,Long-only portfolio variance,-3.0920441618258576,-5.9761425369757,1.1790594494999607
+Stress Return-risk reconciled selector,Euclidean,-1.9728447181029174,-4.333044329371168,-0.14866167911311481
+Stress Return-risk reconciled selector,Frobenius,-2.1707250679270484,-4.577878295694103,-0.3508962145710463
+Stress Return-risk reconciled selector,QLIKE,-1.2251398165185723,-1.9113986782533925,-0.6767350233324563
+Stress Return-risk reconciled selector,Long-only portfolio variance,-2.7112226591069377,-5.680589384992519,1.7246636481732083
+Stress Combined-risk reconciled selector,Euclidean,-1.947298368098438,-4.310235227194379,-0.10066963587383776
+Stress Combined-risk reconciled selector,Frobenius,-2.1867851939166183,-4.620472368042099,-0.34686560560941027
+Stress Combined-risk reconciled selector,QLIKE,-0.9511767096710755,-1.6891022593073957,-0.3528927014933196
+Stress Combined-risk reconciled selector,Long-only portfolio variance,-3.0164137611739306,-5.808925609817579,1.0588768204312702
+Fixed stress-gated covariance reconciliation,Euclidean,-2.8108686542930306,-5.610869262414954,-0.39637594629738104
+Fixed stress-gated covariance reconciliation,Frobenius,-3.075800086449154,-5.905113989918032,-0.6367049520062843
+Fixed stress-gated covariance reconciliation,QLIKE,-1.1726394992190414,-1.8042945753761888,-0.6622470264095494
+Fixed stress-gated covariance reconciliation,Long-only portfolio variance,-5.141873192487645,-8.700225059762344,0.91531489943739
+Exploratory balanced stress-reconciled candidate,Euclidean,-2.8204659809046295,-5.591587056066754,-0.4032160577057471
+Exploratory balanced stress-reconciled candidate,Frobenius,-3.079926838177871,-5.896143785981623,-0.6395137198025382
+Exploratory balanced stress-reconciled candidate,QLIKE,-1.1850130827300576,-1.8171970050406219,-0.6737619567297044
+Exploratory balanced stress-reconciled candidate,Long-only portfolio variance,-3.4816478520114713,-5.915269304639431,0.610581666873307

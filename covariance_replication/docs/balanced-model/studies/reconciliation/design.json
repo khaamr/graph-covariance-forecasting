@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-27",
+  "primary": {
+    "base": "Equal log-ridge pool",
+    "driver": "Smoothed realized weights, half-life20",
+    "strength": 0.5,
+    "matrix_distance": "Gaussian KL"
+  },
+  "bases": [
+    "Log/Fisher GHAR",
+    "Ridge log-HAR",
+    "Equal log-ridge pool"
+  ],
+  "drivers": [
+    "Arithmetic covariance GMV",
+    "Smoothed realized weights, half-life5",
+    "Smoothed realized weights, half-life20",
+    "Smoothed realized weights, half-life60"
+  ],
+  "strengths": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "matrix_distances": [
+    "Gaussian KL",
+    "Reverse Gaussian KL",
+    "Frobenius"
+  ],
+  "construction": "S=F-(F w)(F w)^T/(w^T F w)+c h h^T; h=1 on active target-weight assets and max(1,(F w)_i/(w^T F w)) on inactive assets; c positive distance-minimizing scalar",
+  "selectors": "Monthly causal selection on252 genuine past forecasts; integrated-risk, return-risk and combined minimax rules; HAR-DRD fallback",
+  "evaluation": "Unchanged245 development and397 reused later origins; same targets, same standard unconstrained-simplex long-only optimization",
+  "qualification": "New experimental covariance reconciliation, not implementation of cited DCW method; all forecast inputs earlier than target; all variants retained; no independent-confirmation claim",
+  "bootstrap": {
+    "draws": 10000,
+    "mean_block": 10,
+    "seed": 20261127
+  }
+}

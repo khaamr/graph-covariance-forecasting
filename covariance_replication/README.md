@@ -56,11 +56,31 @@ Use `transformation="log_fisher"`, `graph_effect="daily"`, or `refit_every=1` / 
 
 The [GLASSO audit](docs/glasso-diagnostic.md) records penalties, CV curves, graph changes, and exact rolling-window dates. A denser grid finds independently verified better validation likelihoods, but the graph model still does not recover the paper's distance-loss ranking. `audit_glasso.py` and `verify_glasso_penalties.py` reproduce this check without changing forecasting defaults.
 
+## Balanced covariance with a stress response
+
+The [selected model and complete search record](docs/balanced-model/results.md) combine log-graph and ridge forecasts with lagged stress-sensitive portfolio reconciliation. On 397 common reused later dates it lowers Euclidean, Frobenius and QLIKE losses by 2.68%, 2.94% and 1.19%, and annualized long-only risk from 9.722% to 9.511%. All four point estimates also improve in development 2024. Risk uncertainty still includes zero, and selection is retrospective. This does not establish joint statistical superiority or reproduce the original paper's numerical experiment.
+
+The [comparison with the first version](docs/balanced-model/results.md#difference-from-the-first-version) holds dates and targets fixed and reports the remaining uncertainty.
+
+Use `balanced_covariance.balanced_covariance_forecast(...)` for one forecast, or `run_balanced_model.py` for the standalone benchmark pipeline. The latter reproduces all 642 selected forecasts without running the losing challengers. Mathematical guarantees and the 204/148/166-configuration studies are retained with the report.
+
 ## balanced covariance ensemble
 
 The [balanced-model experiment](docs/joint-pool/results.md) adds a fixed equal-weight pool of five causal covariance experts and a separately evaluated learned selector. On 397 common reused 2025–2026 dates, the fixed pool improves all three mean forecast losses and observed long-only risk versus HAR-DRD; QLIKE and risk intervals still include zero. The learned selector fails the joint risk target and is retained in the comparison. This is an ensemble extension, not an exact reproduction of the paper.
 
 `joint_pool.fixed_covariance_pool(expert_bank)` exposes the fixed model directly. `prepare_joint_experts.py` and `run_joint_pool.py` reproduce the fixed protocol and all controls. The graph models can optionally use `glasso_alphas=12`; defaults remain unchanged.
+
+## Literature-guided challengers
+
+The [literature-guided study](docs/literature-challengers/results.md) evaluates six ridge log-HAR and factor-correlation variants on the same dates as the fixed ensemble. Ridge log-HAR with graph correlations lowers later-period QLIKE by 1.59% versus HAR-DRD, but increases risk slightly. None of the six meets the four-endpoint objective. Sources, all controls, paired intervals and commands are retained; forecasting defaults remain unchanged.
+
+## Published-method implementations
+
+The [published-method study](docs/published-methods/results.md) implements DCC-NL, matrix-log factor VHAR, daily HAR loadings, and sector residual LASSO/adaptive LASSO. It includes an independent check against the authors' DCC C core. The market-factor benchmark does not improve on HAR-DRD; all outcomes and data adaptations are retained. Install `requirements-published.txt`, then use `run_published_models.py`. Historical factor portfolio weights can be supplied for additional specifications.
+
+## Diagnostic corrections
+
+The [failure diagnosis and corrections](docs/model-diagnosis/results.md) add realized-covariance HEAVY and optional raw-input/matrix-smearing factor forecasts. Both failing families improve substantially relative to their earlier versions; all seven challengers still miss the four-endpoint objective against HAR-DRD. Defaults and earlier results are preserved. `run_diagnosis_repairs.py` and `audit_model_diagnosis.py` reproduce the comparison and supporting diagnostics.
 
 ## extended research
 

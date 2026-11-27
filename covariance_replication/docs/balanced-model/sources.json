@@ -1,0 +1,12 @@
+[
+  {
+    "title": "A dynamic conditional approach to portfolio weights forecasting",
+    "url": "https://arxiv.org/abs/2004.12400",
+    "role": "Inspiration for separating covariance and allocation forecasts; not an implementation of this DCW paper."
+  },
+  {
+    "title": "Shrinkage estimation of large covariance matrices: Keep it simple, statistician?",
+    "url": "https://www.econ.uzh.ch/dam/jcr:68117157-a339-4600-8d9c-71151e69c177/jmva_2021.pdf",
+    "role": "Motivation for distinguishing statistical matrix loss from portfolio risk."
+  }
+]

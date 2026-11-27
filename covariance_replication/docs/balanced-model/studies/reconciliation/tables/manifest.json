@@ -1,0 +1,53 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "primary": {
+      "base": "Equal log-ridge pool",
+      "driver": "Smoothed realized weights, half-life20",
+      "strength": 0.5,
+      "matrix_distance": "Gaussian KL"
+    },
+    "bases": [
+      "Log/Fisher GHAR",
+      "Ridge log-HAR",
+      "Equal log-ridge pool"
+    ],
+    "drivers": [
+      "Arithmetic covariance GMV",
+      "Smoothed realized weights, half-life5",
+      "Smoothed realized weights, half-life20",
+      "Smoothed realized weights, half-life60"
+    ],
+    "strengths": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "matrix_distances": [
+      "Gaussian KL",
+      "Reverse Gaussian KL",
+      "Frobenius"
+    ],
+    "construction": "S=F-(F w)(F w)^T/(w^T F w)+c h h^T; h=1 on active target-weight assets and max(1,(F w)_i/(w^T F w)) on inactive assets; c positive distance-minimizing scalar",
+    "selectors": "Monthly causal selection on252 genuine past forecasts; integrated-risk, return-risk and combined minimax rules; HAR-DRD fallback",
+    "evaluation": "Unchanged245 development and397 reused later origins; same targets, same standard unconstrained-simplex long-only optimization",
+    "qualification": "New experimental covariance reconciliation, not implementation of cited DCW method; all forecast inputs earlier than target; all variants retained; no independent-confirmation claim",
+    "bootstrap": {
+      "draws": 10000,
+      "mean_block": 10,
+      "seed": 20261127
+    }
+  },
+  "source_sha256": {
+    "covariance_reconciliation.py": "436c634f54cd1717d11b0044ada79f7d0b56682ea92fa846f130cb70548f97d1",
+    "run_covariance_reconciliation.py": "494d90ac343e00b4a8f74862ab07640d9f6a20e2907ec523bc75db2a6c64684a"
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-joint-pool/experts/experts.npz": "12c6f588b276bab180658c68335a4c06f4408e5750df803ea125af6323ba510e",
+    "/private/tmp/graph-cov-risk-target/run/forecasts.npz": "35e1844669a55311d7c051397927e1191e97c54d6379a59a58d81e0960c53364",
+    "/private/tmp/graph-cov-risk-target/run/portfolio-weights.npz": "33a32a5b4d0ff7b273b4cd17c1ad611d5779d4b69e9474c00c7849d0491f13da",
+    "design.json": "4c375ad786c4f0046c50916a03da9f90a163bb6b6217e1cdcf9c15f04abe8435"
+  }
+}

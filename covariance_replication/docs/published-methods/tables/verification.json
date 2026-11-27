@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-27",
+  "new_tests_passed": 12,
+  "origins": 642,
+  "development_origins": 245,
+  "later_origins": 397,
+  "models_compared": 17,
+  "dcc_monthly_refits": 33,
+  "factor_daily_refits": 642,
+  "strict_training_chronology": true,
+  "garch_final_failures": 0,
+  "garch_roundoff_repairs": 3,
+  "factor_path_warnings": 0,
+  "factor_max_kkt_error": 8.384404281969183e-16,
+  "all_predictions_positive_definite": true,
+  "first_evaluation_forecasts_match_final_API_exactly": true,
+  "characteristic_factor_counts_tested": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "empirical_factor": "User-authorized equal-weight market portfolio",
+  "joint_improvement_achieved": false,
+  "qualification": "Complete estimators with documented data/protocol adaptations. Reused retrospective evaluation, not original numerical replication."
+}

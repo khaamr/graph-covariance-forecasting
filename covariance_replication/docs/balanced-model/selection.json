@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-27",
+  "source_study": "stress-reconciliation",
+  "candidate": 159,
+  "base": "Equal Log/Fisher graph and ridge log-HAR covariance forecasts",
+  "driver": "EWMA covariance half-life5 observed sessions",
+  "gate": "Lagged realized trace / past22-observation mean; logarithmic ramp from1to3",
+  "matrix_distance": "Gaussian KL within rank-two reconciliation family",
+  "selection": "Highlighted after inspecting the predefined stress family and requiring favorable four-endpoint point estimates in both periods",
+  "qualification": "Exploratory selection on reused data. No independent confirmation or original paper numerical-reproduction claim."
+}

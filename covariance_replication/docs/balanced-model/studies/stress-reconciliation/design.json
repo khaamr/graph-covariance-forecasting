@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-27",
+  "primary": {
+    "base": "Equal log-ridge pool",
+    "driver": "Yesterday realized covariance GMV",
+    "gate": "Volatility ratio1to3",
+    "distance": "Gaussian KL"
+  },
+  "bases": [
+    "Log/Fisher GHAR",
+    "Ridge log-HAR",
+    "Equal log-ridge pool"
+  ],
+  "drivers": [
+    "Yesterday realized covariance GMV",
+    "EWMA covariance half-life2",
+    "EWMA covariance half-life5"
+  ],
+  "gates": [
+    "Fixed0.25",
+    "Fixed0.5",
+    "Fixed0.75",
+    "Fixed1",
+    "Volatility ratio1to3",
+    "Volatility ratio1.5to3"
+  ],
+  "matrix_distances": [
+    "Gaussian KL",
+    "Reverse Gaussian KL",
+    "Frobenius"
+  ],
+  "gate_definition": "Previous realized trace / preceding22-session mean trace; beta=clip(log(ratio/lower)/log(3/lower),0,1); all inputs strictly lagged",
+  "selectors": "252 genuinely past outcomes, same3 integrated/return/combined minimax criteria, HAR-DRD fallback",
+  "iteration_rule": "Primary and all variants fixed before stress-family evaluation; retain every failure and report outcome-selected models separately",
+  "evaluation": "Same245 development and397 reused later dates",
+  "qualification": "Retrospective exploratory extension, not independent confirmation or original GHAR numerical reproduction",
+  "bootstrap": {
+    "draws": 10000,
+    "mean_block": 10,
+    "seed": 20261127
+  }
+}

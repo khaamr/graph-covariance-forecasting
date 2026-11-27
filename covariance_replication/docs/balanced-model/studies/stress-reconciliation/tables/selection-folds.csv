@@ -1,0 +1,100 @@
+model,month,first_forecast,last_validation_label,candidate,worst_ratio,base,driver,gate,strength,distance
+Stress Integrated-risk reconciled selector,2024-01,2024-01-08,2024-01-05,19,0.9778731215784534,0,1,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2024-01,2024-01-08,2024-01-05,156,0.9647250723112599,2,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-01,2024-01-08,2024-01-05,43,0.9848537197639488,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-02,2024-02-01,2024-01-31,150,0.9787482140378319,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-02,2024-02-01,2024-01-31,43,0.9597453497535778,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Combined-risk reconciled selector,2024-02,2024-02-01,2024-01-31,40,0.9812013585980512,0,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-03,2024-03-01,2024-02-29,37,0.9809504678414868,0,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2024-03,2024-03-01,2024-02-29,43,0.9692589271404928,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Combined-risk reconciled selector,2024-03,2024-03-01,2024-02-29,40,0.9849358768349896,0,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-04,2024-04-01,2024-03-28,150,0.9790821020274083,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-04,2024-04-01,2024-03-28,46,0.956982836615593,0,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-04,2024-04-01,2024-03-28,153,0.9825150516092678,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-05,2024-05-01,2024-04-30,147,0.9803923650425682,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2024-05,2024-05-01,2024-04-30,156,0.9627255202920267,2,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-05,2024-05-01,2024-04-30,153,0.984491096687699,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-06,2024-06-03,2024-05-31,147,0.9811920988474172,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2024-06,2024-06-03,2024-05-31,156,0.9651350142498535,2,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-06,2024-06-03,2024-05-31,153,0.9859543741052075,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-07,2024-07-01,2024-06-28,147,0.9815624626794517,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2024-07,2024-07-01,2024-06-28,156,0.9671306999546281,2,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-07,2024-07-01,2024-06-28,43,0.9859885688273836,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-08,2024-08-01,2024-07-31,150,0.9809929048280197,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-08,2024-08-01,2024-07-31,156,0.9749222396600086,2,2,Fixed1,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2024-08,2024-08-01,2024-07-31,43,0.987751808434667,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-09,2024-09-03,2024-08-30,95,0.9801054499314769,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-09,2024-09-03,2024-08-30,43,0.9737981566572613,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Combined-risk reconciled selector,2024-09,2024-09-03,2024-08-30,43,0.9868990783286307,0,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-10,2024-10-01,2024-09-30,95,0.980277853293786,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-10,2024-10-01,2024-09-30,40,0.9812357254318439,0,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2024-10,2024-10-01,2024-09-30,40,0.9906178627159219,0,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-11,2024-11-01,2024-10-31,95,0.9775683373027925,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-11,2024-11-01,2024-10-31,40,0.9786723750336122,0,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2024-11,2024-11-01,2024-10-31,37,0.9874625607875323,0,2,Fixed0.25,0.25,Gaussian KL
+Stress Integrated-risk reconciled selector,2024-12,2024-12-02,2024-11-27,95,0.979069699402824,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2024-12,2024-12-02,2024-11-27,150,0.9771059237906193,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2024-12,2024-12-02,2024-11-27,150,0.9885529618953097,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-01,2025-01-02,2024-12-31,95,0.9824846705656326,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2025-01,2025-01-02,2024-12-31,147,0.9909220304818509,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Combined-risk reconciled selector,2025-01,2025-01-02,2024-12-31,37,0.9947183699829529,0,2,Fixed0.25,0.25,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-02,2025-02-03,2025-01-31,95,0.984529763975009,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2025-02,2025-02-03,2025-01-31,150,0.9940929879954927,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2025-02,2025-02-03,2025-01-31,150,0.9970464939977464,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-03,2025-03-03,2025-02-28,95,0.9847117413780386,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2025-03,2025-03-03,2025-02-28,98,0.9884472256130507,1,2,Fixed0.75,0.75,Gaussian KL
+Stress Combined-risk reconciled selector,2025-03,2025-03-03,2025-02-28,98,0.9942236128065254,1,2,Fixed0.75,0.75,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-04,2025-04-01,2025-03-31,95,0.9859378693600743,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2025-04,2025-04-01,2025-03-31,95,0.9852530713624569,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2025-04,2025-04-01,2025-03-31,95,0.9926265356812285,1,2,Fixed0.5,0.5,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-05,2025-05-01,2025-04-30,147,0.9822112324010689,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2025-05,2025-05-01,2025-04-30,161,0.953150926694518,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-05,2025-05-01,2025-04-30,141,0.9823567106042683,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-06,2025-06-02,2025-05-30,141,0.984728709209399,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-06,2025-06-02,2025-05-30,161,0.9579232072780307,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-06,2025-06-02,2025-05-30,141,0.984728709209399,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-07,2025-07-01,2025-06-30,33,0.9839969770119474,0,1,Volatility ratio1to3,1.0,Frobenius
+Stress Return-risk reconciled selector,2025-07,2025-07-01,2025-06-30,161,0.953776901724577,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-07,2025-07-01,2025-06-30,33,0.9839969770119474,0,1,Volatility ratio1to3,1.0,Frobenius
+Stress Integrated-risk reconciled selector,2025-08,2025-08-01,2025-07-31,141,0.9835352623934869,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-08,2025-08-01,2025-07-31,161,0.9542709323754885,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-08,2025-08-01,2025-07-31,141,0.9835352623934869,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-09,2025-09-02,2025-08-29,141,0.98306327115476,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-09,2025-09-02,2025-08-29,161,0.962640786086602,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-09,2025-09-02,2025-08-29,141,0.98306327115476,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-10,2025-10-01,2025-09-30,141,0.9829566952407967,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-10,2025-10-01,2025-09-30,161,0.9631568913469527,2,2,Volatility ratio1to3,1.0,Frobenius
+Stress Combined-risk reconciled selector,2025-10,2025-10-01,2025-09-30,141,0.9829566952407967,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-11,2025-11-03,2025-10-31,141,0.9838496635110447,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-11,2025-11-03,2025-10-31,159,0.9632057574452786,2,2,Volatility ratio1to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2025-11,2025-11-03,2025-10-31,141,0.9838496635110447,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2025-12,2025-12-01,2025-11-26,141,0.9843826184565908,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2025-12,2025-12-01,2025-11-26,123,0.9605261689875659,2,0,Volatility ratio1to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2025-12,2025-12-01,2025-11-26,141,0.9843826184565908,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-01,2026-01-02,2025-12-31,31,0.9834311147699659,0,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2026-01,2026-01-02,2025-12-31,123,0.9585065858206132,2,0,Volatility ratio1to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2026-01,2026-01-02,2025-12-31,31,0.9834311147699659,0,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-02,2026-02-02,2026-01-30,141,0.9845806333688446,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2026-02,2026-02-02,2026-01-30,123,0.9607293080423736,2,0,Volatility ratio1to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2026-02,2026-02-02,2026-01-30,141,0.9845806333688446,2,1,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-03,2026-03-02,2026-02-27,126,0.9843114351220674,2,0,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2026-03,2026-03-02,2026-02-27,126,0.9580647727353044,2,0,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2026-03,2026-03-02,2026-02-27,126,0.9843114351220674,2,0,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-04,2026-04-01,2026-03-31,126,0.9828049482467812,2,0,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Return-risk reconciled selector,2026-04,2026-04-01,2026-03-31,123,0.9591734438522991,2,0,Volatility ratio1to3,1.0,Gaussian KL
+Stress Combined-risk reconciled selector,2026-04,2026-04-01,2026-03-31,126,0.9828049482467812,2,0,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-05,2026-05-01,2026-04-30,147,0.9881719559045693,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Return-risk reconciled selector,2026-05,2026-05-01,2026-04-30,110,0.9797694358113795,2,-1,identity,0.0,identity
+Stress Combined-risk reconciled selector,2026-05,2026-05-01,2026-04-30,110,0.990346147005508,2,-1,identity,0.0,identity
+Stress Integrated-risk reconciled selector,2026-06,2026-06-01,2026-05-29,150,0.9852255514957499,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Return-risk reconciled selector,2026-06,2026-06-01,2026-05-29,150,0.9856171884458838,2,2,Fixed0.5,0.5,Gaussian KL
+Stress Combined-risk reconciled selector,2026-06,2026-06-01,2026-05-29,159,0.9873131591750993,2,2,Volatility ratio1to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-08,2026-08-20,2026-06-08,153,0.9871713798474476,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Return-risk reconciled selector,2026-08,2026-08-20,2026-06-08,147,0.988376079949977,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Combined-risk reconciled selector,2026-08,2026-08-20,2026-06-08,162,0.9902678418958049,2,2,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-09,2026-09-01,2026-08-31,153,0.9876035630517791,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Return-risk reconciled selector,2026-09,2026-09-01,2026-08-31,147,0.9887234643294036,2,2,Fixed0.25,0.25,Gaussian KL
+Stress Combined-risk reconciled selector,2026-09,2026-09-01,2026-08-31,144,0.9906977616432505,2,1,Volatility ratio1.5to3,1.0,Gaussian KL
+Stress Integrated-risk reconciled selector,2026-10,2026-10-01,2026-09-30,153,0.9915629861456047,2,2,Fixed0.75,0.75,Gaussian KL
+Stress Return-risk reconciled selector,2026-10,2026-10-01,2026-09-30,110,0.995050525131259,2,-1,identity,0.0,identity
+Stress Combined-risk reconciled selector,2026-10,2026-10-01,2026-09-30,110,0.9973563124961723,2,-1,identity,0.0,identity

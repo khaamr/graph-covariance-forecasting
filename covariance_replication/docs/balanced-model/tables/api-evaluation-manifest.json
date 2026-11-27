@@ -1,0 +1,13 @@
+{
+  "model": "Stress-reconciled log-ridge covariance",
+  "source_sha256": {
+    "balanced_covariance.py": "153f40ed8e27be5e4859c5ba8eabe8c15f46ac139ca5329de4a450376edf900e",
+    "evaluate_balanced_covariance.py": "7f2c864eed820e0aa13c7a764a497b99b9e1922ee1730e1c2733534bcdc12f99"
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-stress-reconciliation/run/forecasts.npz": "d43daf7521298d4a0ce2bc4ae3a61c0c42209cc27854bb9d10a78b92bdd30c01",
+    "/private/tmp/graph-cov-stress-reconciliation/run/portfolio-weights.npz": "f8f8c02341eef2d170618cb8cb1e3c8cf3aaf2ea85a11799d438b24048cd5b7c"
+  },
+  "qualification": "Previously defined stress-family candidate159, highlighted after retrospective comparison. All live forecasts consume only earlier observations."
+}

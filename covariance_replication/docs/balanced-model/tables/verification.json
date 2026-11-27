@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-27",
+  "model": "Stress-reconciled log-ridge covariance",
+  "public_API_origins_checked": 642,
+  "standalone_fresh_ridge_forecasts_match_recorded_components_exactly": true,
+  "standalone_predictions_match_API_evaluation_exactly": true,
+  "strict_ridge_fit_chronology": true,
+  "all_predictions_finite_positive_definite": true,
+  "periods": {
+    "development_2024": {
+      "all_four_point_improvements": true,
+      "all_four_95_upper_bounds_below_zero": false,
+      "annual_risk_percent": 7.411810602472359
+    },
+    "reused_2025_2026": {
+      "all_four_point_improvements": true,
+      "all_four_95_upper_bounds_below_zero": false,
+      "annual_risk_percent": 9.511276508335373
+    }
+  },
+  "new_tests_passed": 13,
+  "search_counts_this_turn": {
+    "risk_calibration": 204,
+    "reconciliation": 148,
+    "stress_reconciliation": 166
+  },
+  "selection_is_exploratory": true,
+  "independent_confirmation": false,
+  "relevant_tests_passed": 80,
+  "unrelated_spectral_torch_tests_run": false
+}

@@ -1,0 +1,21 @@
+model,endpoint,change_percent,lower_95,upper_95
+Integrated-risk reconciled selector,Euclidean,-7.110277119373931,-9.63347240139568,-4.802308807004359
+Integrated-risk reconciled selector,Frobenius,-7.515543505459011,-10.109968420488258,-5.162330738153493
+Integrated-risk reconciled selector,QLIKE,-1.1079181636704405,-2.0426774847524354,-0.2493214770411867
+Integrated-risk reconciled selector,Long-only portfolio variance,-2.1199316108738264,-6.391923072238182,1.7952356743711129
+Return-risk reconciled selector,Euclidean,-7.003458750739055,-9.568481641755973,-4.647968499571181
+Return-risk reconciled selector,Frobenius,-7.3710537372724705,-10.013053309906814,-4.9191081018574225
+Return-risk reconciled selector,QLIKE,-1.5563596033392857,-2.405645836812467,-0.7817527715088776
+Return-risk reconciled selector,Long-only portfolio variance,-0.7560942426018125,-6.883737975857495,4.8119158884478805
+Combined-risk reconciled selector,Euclidean,-7.086968074238631,-9.759592861090525,-4.685414963312942
+Combined-risk reconciled selector,Frobenius,-7.555133082015697,-10.284310576634713,-5.052917156703596
+Combined-risk reconciled selector,QLIKE,-0.7078429566767075,-1.74443920956071,0.260048205744458
+Combined-risk reconciled selector,Long-only portfolio variance,-1.2268879047383496,-5.782851016015191,3.087195678312698
+Fixed KL covariance reconciliation,Euclidean,-7.209392354869881,-9.784823686501365,-4.8518652090871806
+Fixed KL covariance reconciliation,Frobenius,-7.5741204156802855,-10.242790043547108,-5.1394023600126975
+Fixed KL covariance reconciliation,QLIKE,-1.5374281063794348,-2.425224424791183,-0.7052982754041294
+Fixed KL covariance reconciliation,Long-only portfolio variance,-2.1042563456378227,-6.06198406628053,1.6414561862035646
+Exploratory balanced reconciled candidate,Euclidean,-6.142105252742514,-8.23272533902498,-4.260285678738575
+Exploratory balanced reconciled candidate,Frobenius,-6.175015913192128,-8.251307681019348,-4.286058730841256
+Exploratory balanced reconciled candidate,QLIKE,-1.520174431130028,-2.4266624831456887,-0.6811429633064678
+Exploratory balanced reconciled candidate,Long-only portfolio variance,0.9681008887199694,-1.7983782357519227,3.756830347093269

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "DCC paper",
+    "url": "https://www.econ.uzh.ch/dam/jcr:28fa9939-753e-4f5c-932d-945872f30cfd/jbes_2019.pdf",
+    "download_sha256": "637883a72879835a24ea6d16ac083945ff9a5a07a94d116e3beba1cfa07a3190"
+  },
+  {
+    "title": "DCC author reference package",
+    "url": "https://www.econ.uzh.ch/dam/jcr:e0f3cf8c-7627-4d52-b94b-974dcfbf8c84/DCC_NL06.zip",
+    "download_sha256": "23617194d5b719b7db83dc5264a5fdd2662f47d3f2328bf72cbbf5e61605066c"
+  },
+  {
+    "title": "Author analytical nonlinear shrinkage",
+    "url": "https://www.econ.uzh.ch/dam/jcr:11d24ab0-7ec2-4b3f-8ef4-7affaa727d25/analytical_shrinkage.m.zip",
+    "download_sha256": "270279ab8d44bf55fad142d6052a5bf9dfaedf171f9712cd97351b52452cdc55"
+  },
+  {
+    "title": "Factor-VHAR paper",
+    "url": "https://arxiv.org/abs/2303.16151",
+    "download_sha256": "1ec7bc20aa43fd7557ef631d470762b6317050599549be730dfccde4f6d05807"
+  }
+]

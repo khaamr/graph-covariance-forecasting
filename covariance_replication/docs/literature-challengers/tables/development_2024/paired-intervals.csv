@@ -1,0 +1,25 @@
+model,endpoint,change_percent,lower_95,upper_95
+Factor-regularized ridge log-HAR,Euclidean,-4.054829269422555,-5.922986837872788,-2.2780477921488096
+Factor-regularized ridge log-HAR,Frobenius,-3.7002532612734784,-5.544683977107078,-1.9348558819862187
+Factor-regularized ridge log-HAR,QLIKE,-1.9416558472820533,-2.6815056916876117,-1.247811474982232
+Factor-regularized ridge log-HAR,Long-only portfolio variance,0.8438907724364952,-4.323343550177593,7.088269081193992
+Ridge log-HAR + graph correlation,Euclidean,-4.592871270516474,-6.398081484509852,-2.915788942778428
+Ridge log-HAR + graph correlation,Frobenius,-4.437127364445425,-6.275999528781582,-2.7603295629724682
+Ridge log-HAR + graph correlation,QLIKE,-2.140043761802779,-2.8675387343324754,-1.4642029220851323
+Ridge log-HAR + graph correlation,Long-only portfolio variance,0.7713497862679386,-3.233422309614781,5.407708995647618
+Ridge log-HAR + factor correlation,Euclidean,-1.6623636274011866,-3.7364139894306363,0.48106868718268725
+Ridge log-HAR + factor correlation,Frobenius,-0.5297593106624365,-2.6962605310171504,1.7463944787524062
+Ridge log-HAR + factor correlation,QLIKE,0.9209352615945354,-0.03274571989460043,1.7727746435189513
+Ridge log-HAR + factor correlation,Long-only portfolio variance,3.9385343732194933,-3.712753226712178,12.988340575476071
+Graph log-variance + factor blend,Euclidean,-5.973699595955595,-8.36410541808424,-3.7807090182059757
+Graph log-variance + factor blend,Frobenius,-6.006155238746325,-8.35220311293062,-3.8413525535600455
+Graph log-variance + factor blend,QLIKE,-0.04701621762970287,-1.2716759118881376,1.1433227572688307
+Graph log-variance + factor blend,Long-only portfolio variance,-0.8260480515275725,-4.698237874792149,2.95581365489368
+Graph log-variance + factor correlation,Euclidean,-3.8252035574634524,-6.263359249002177,-1.492926197133007
+Graph log-variance + factor correlation,Frobenius,-3.1688513323753775,-5.608258053258204,-0.7776688028218777
+Graph log-variance + factor correlation,QLIKE,3.3797942233807277,1.8274568261302082,4.813157136479291
+Graph log-variance + factor correlation,Long-only portfolio variance,0.8007164341240935,-4.956938153383617,6.831199953346405
+Multivariate ridge log-HAR + factor blend,Euclidean,-4.291656921918941,-6.722479032518291,-2.00763586780309
+Multivariate ridge log-HAR + factor blend,Frobenius,-4.2698522107419645,-6.612824399912599,-2.087028115868062
+Multivariate ridge log-HAR + factor blend,QLIKE,-1.1098205669958339,-1.940912840881615,-0.34973672035512665
+Multivariate ridge log-HAR + factor blend,Long-only portfolio variance,-3.2158375116715487,-9.04786755900221,3.481944688460469

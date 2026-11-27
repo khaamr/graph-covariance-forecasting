@@ -1,0 +1,12 @@
+{
+  "candidate": 190,
+  "case": 95,
+  "definition": {
+    "base": 5,
+    "kind": "full",
+    "strength": 0.1,
+    "history": 504
+  },
+  "scale": "identity",
+  "qualification": "Chosen after comparing all later outcomes; not a causally selected strategy or independent validation."
+}

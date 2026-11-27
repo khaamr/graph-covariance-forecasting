@@ -1,0 +1,10 @@
+{
+  "candidate": 102,
+  "definition": {
+    "base": 2,
+    "driver": 0,
+    "strength": 0.5,
+    "distance": "Gaussian KL"
+  },
+  "qualification": "Chosen after comparing all outcomes; not an independently validated model."
+}

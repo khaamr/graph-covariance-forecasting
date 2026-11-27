@@ -1,0 +1,5 @@
+driver,max_relative_gap,fallbacks,max_iterations
+arithmetic,2.323478733153083e-15,0,27
+half-life5,6.470530054474976e-15,0,28
+half-life20,6.470530054474976e-15,0,28
+half-life60,6.470530054474976e-15,0,28

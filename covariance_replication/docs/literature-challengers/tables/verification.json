@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-27",
+  "new_tests_passed": 4,
+  "common_origins": 642,
+  "monthly_refits": 33,
+  "strict_training_chronology": true,
+  "fitting_before_validation": true,
+  "factor_inputs_before_month": true,
+  "all_covariances_positive_definite": true,
+  "primary_all_four_improvements": false,
+  "all_six_challengers_fail_later_risk_target": true,
+  "qualification": "Exploratory retrospective comparison on reused dates; QLIKE winner selected after inspecting six fixed challengers."
+}

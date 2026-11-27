@@ -1,0 +1,12 @@
+{
+  "model": "Stress-reconciled log-ridge covariance",
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-joint-pool/experts/experts.npz": "12c6f588b276bab180658c68335a4c06f4408e5750df803ea125af6323ba510e"
+  },
+  "source_sha256": {
+    "balanced_covariance.py": "153f40ed8e27be5e4859c5ba8eabe8c15f46ac139ca5329de4a450376edf900e",
+    "run_balanced_model.py": "6d736a48258a6fea79e9ae9df38dfec57f38b0e75e9ae4785ef9c7c78ce7e985"
+  },
+  "qualification": "Exploratory selected model on the established common benchmark; not fresh confirmation."
+}

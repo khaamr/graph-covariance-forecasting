@@ -1,0 +1,11 @@
+{
+  "candidate": 126,
+  "definition": {
+    "base": 2,
+    "driver": 0,
+    "gate": "Volatility ratio1.5to3",
+    "strength": 1.0,
+    "distance": "Gaussian KL"
+  },
+  "qualification": "Chosen after comparing all outcomes; not an independently validated model."
+}

@@ -1,0 +1,29 @@
+model,endpoint,change_percent,lower_95,upper_95
+Prequential realized-risk covariance selector,Euclidean,-4.629665846091246,-6.8296134745693395,-2.6272324754103926
+Prequential realized-risk covariance selector,Frobenius,-4.6250730295414595,-6.829986890741739,-2.6353256471766824
+Prequential realized-risk covariance selector,QLIKE,-1.2493990193750748,-2.1935603096874843,-0.37615976713750315
+Prequential realized-risk covariance selector,Long-only portfolio variance,0.5516417505337712,-2.0356521432717294,3.226739845955114
+Prequential return-risk covariance selector,Euclidean,-4.189814042307227,-6.3313670331975525,-2.2680849954165865
+Prequential return-risk covariance selector,Frobenius,-4.18277050106054,-6.430997138038527,-2.236349073372097
+Prequential return-risk covariance selector,QLIKE,-1.449033830124813,-2.4120265244073935,-0.592556920460034
+Prequential return-risk covariance selector,Long-only portfolio variance,0.9216946651581681,-1.870227042078744,3.7286037214024264
+Prequential integrated-risk covariance selector,Euclidean,-6.086100091863678,-8.16310205413404,-4.20210992953997
+Prequential integrated-risk covariance selector,Frobenius,-6.159910759494636,-8.229769871157965,-4.286850258842028
+Prequential integrated-risk covariance selector,QLIKE,-1.8147700539909994,-2.660029087575585,-1.0344207727218284
+Prequential integrated-risk covariance selector,Long-only portfolio variance,0.17552461445684564,-3.296080700307535,3.494561837761619
+Fixed equal log-ridge pool,Euclidean,-5.988397570015813,-8.03392711504227,-4.114568951001964
+Fixed equal log-ridge pool,Frobenius,-5.980792401465706,-8.02606665099044,-4.121135338138628
+Fixed equal log-ridge pool,QLIKE,-1.5293105626605463,-2.4368668890849734,-0.6879710067378862
+Fixed equal log-ridge pool,Long-only portfolio variance,-0.061505759497315626,-3.788434852563486,3.5269731911636084
+Fixed equal log-ridge-arithmetic pool,Euclidean,-5.369290680372862,-7.183958486906998,-3.8023462673779815
+Fixed equal log-ridge-arithmetic pool,Frobenius,-5.605806972656591,-7.525524230126076,-3.9395727523448696
+Fixed equal log-ridge-arithmetic pool,QLIKE,-0.9612025341908415,-1.7613409485564968,-0.21263332790820003
+Fixed equal log-ridge-arithmetic pool,Long-only portfolio variance,0.7056459836460638,-2.121653130197269,3.5156299656385817
+Fixed 75-log 25-arithmetic pool,Euclidean,-6.180853907147399,-8.280285570745505,-4.326917226401172
+Fixed 75-log 25-arithmetic pool,Frobenius,-6.471100278257791,-8.633636295094037,-4.580676650053482
+Fixed 75-log 25-arithmetic pool,QLIKE,-0.2302784072870101,-1.2536806467010644,0.7631998998694091
+Fixed 75-log 25-arithmetic pool,Long-only portfolio variance,0.17890091441756795,-2.9939207455964825,3.265793735697618
+Exploratory best balanced calibrated candidate,Euclidean,-5.805295837323388,-7.711686630555291,-4.123057013075402
+Exploratory best balanced calibrated candidate,Frobenius,-6.0167505161135555,-7.939808502027393,-4.303925591165927
+Exploratory best balanced calibrated candidate,QLIKE,-0.6305451186217281,-1.5961993173047626,0.27841304758382035
+Exploratory best balanced calibrated candidate,Long-only portfolio variance,0.9635456236003481,-1.6631278046798637,3.5799917517600965

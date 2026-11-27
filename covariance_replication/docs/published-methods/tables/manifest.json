@@ -1,0 +1,55 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "models": [
+      "DCC-NL analytical target",
+      "Factor-VHAR market LASSO",
+      "Factor-VHAR market adaptive LASSO"
+    ],
+    "dcc": {
+      "lookback": 1250,
+      "refit": "calendar month",
+      "univariate": "Demeaned return series; Gaussian GARCH(1,1) MLE",
+      "correlation": "Contiguous-pair 2MSCLE; alpha,beta >=0; alpha+beta <=0.99998",
+      "shrinkage": "Ledoit-Wolf analytical nonlinear shrinkage; author-supported replacement for QuEST",
+      "target": "Normalize shrunk covariance of GARCH-standardized residuals to correlation",
+      "forecast": "Genuine one-step-ahead H, updated on every earlier retained observation"
+    },
+    "factor": {
+      "lookback": 1000,
+      "refit": "daily",
+      "weights": "Equal-weight market factor, explicitly authorized by user; general interface accepts historical NxK factor portfolio weights",
+      "factor_transform": "Symmetric matrix logarithm",
+      "factor_features": "Overlapping daily, weekly(5),monthly(22) lags of matrix-log vech",
+      "factor_estimator": "Equationwise LASSO or adaptive LASSO; BIC over full LARS knots",
+      "beta_estimator": "Daily realized loadings (W^T Sigma W)^(-1) W^T Sigma; per-loading OLS HAR",
+      "residual": "Sector blocks; matrix-log block coordinates; diagonal lag-one predictors only; equationwise LASSO/adaLASSO BIC; exp reconstruction",
+      "cleaning": "Causal four-standard-deviation, 25%-of-unique-entries screen; replace with preceding 10 nonflagged matrices, training inputs only",
+      "sectors": "Existing 27-stock sector labels; dataset adaptation from original SIC groups",
+      "calendar": "Exclude factor features lacking 22 complete preceding screened SPY sessions"
+    },
+    "evaluation": "Same 642 origins (245 development2024,397 reused2025-26); frozen original actual targets and returns",
+    "bootstrap": {
+      "draws": 10000,
+      "mean_block": 10,
+      "seed": 20261127
+    },
+    "iteration_rule": "No test-outcome-driven architecture or parameter changes; retain failed models and all endpoints",
+    "qualifications": [
+      "Full method algorithms with explicit empirical adaptations, not original numerical reproduction",
+      "DCC authors use QuEST in original paper and endorse direct analytical shrinkage in package documentation",
+      "Residual matrix-log treatment made explicit; Section3.3 presents levels equations and Section5.2 applies log matrix transformation",
+      "DCC common-panel returns are intraday open-to-close rather than original CRSP close-to-close; gaps in retained training calendar remain documented"
+    ]
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-literature/run/forecasts.npz": "02697384b926bf4abc0c117b47b4df38229b41da383a1612067835910af304ce",
+    "design.json": "61cd3d162f2632c4d428802e96722c42c732c96e41ddd6e9fefe32b87210c349"
+  },
+  "source_sha256": {
+    "dcc_nl.py": "4f7eafed2b6d4cc62e136d729c822d451fa28ff7c914745258b6cf409f3c46a3",
+    "factor_vhar.py": "af78e58cf1b341268cd7f109f5fe2aec7ef7fed774fe349a9df5bda98933d978",
+    "run_published_models.py": "a12860de2a863f8a590890a5c1a306ab7ac1b060f06dbe48f383ecde285aa4c2"
+  }
+}

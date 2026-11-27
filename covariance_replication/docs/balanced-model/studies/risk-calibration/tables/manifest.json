@@ -1,0 +1,59 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "primary": "Prequential realized-risk covariance selector",
+    "bases": [
+      "HAR-DRD",
+      "Log/Fisher GHAR",
+      "Ridge log-HAR",
+      "Equal log/ridge pool",
+      "Equal log/ridge/arithmetic pool",
+      "75% log graph +25% arithmetic"
+    ],
+    "calibration": "Past standardized-return covariance estimated with Ledoit-Wolf, full or diagonal covariance mapping",
+    "strengths": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "histories": [
+      252,
+      504
+    ],
+    "scales": [
+      "identity",
+      "training QLIKE optimum clipped to [0.75,1.5]"
+    ],
+    "minimum_calibration_history": 252,
+    "refit": "calendar month",
+    "validation": 126,
+    "primary_selection": "Minimize worst ratio across Euclidean, Frobenius, nonnegative QLIKE divergence, integrated realized portfolio variance, and 1+0.5*(return variance ratio-1), evaluated on genuine past candidate forecasts. Tie-break mean ratio then lower calibration intensity and identity scale. HAR-DRD identity fallback included.",
+    "controls": [
+      "Return-risk-only minimax selector",
+      "Realized-risk-only minimax selector",
+      "Fixed base pools",
+      "All fixed calibrated candidates"
+    ],
+    "evaluation": "Identical 245 development and397 reused later origins; unmodified raw covariance targets and returns",
+    "portfolio": "Active-set exact convex QP for candidate evaluation, relative duality-gap certificate; original CVXPY/OSQP re-evaluation for reported selectors and bases",
+    "bootstrap": {
+      "draws": 10000,
+      "mean_block": 10,
+      "seed": 20261127
+    },
+    "qualification": "All dates reused from earlier research. Retrospective exploration, not independent confirmation. Publish full search and failed selectors. No post-evaluation parameter changes."
+  },
+  "source_sha256": {
+    "risk_calibration.py": "40e90b915f2cf20f11a8652c2726c7d22adc71260c8bf0a34ccc62f8661fb88f",
+    "run_risk_calibration.py": "ee8a05a8c0336cfa4d7d72cc0e7cbef4bc8ea4b6fa046574836dae7d93b23c72"
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-joint-pool/experts/experts.npz": "12c6f588b276bab180658c68335a4c06f4408e5750df803ea125af6323ba510e",
+    "/private/tmp/graph-cov-model-diagnosis/run/forecasts.npz": "5ebf2f71cae6da3a2fad7f2ca282b994df9966209998352e9fa292d5b8811188",
+    "/private/tmp/graph-cov-model-diagnosis/run/portfolio-weights.npz": "c09bf7d8cd334dceb34269c82faa3cf81d5f27e0b3243cda6475275231d6efcf",
+    "design.json": "e182f904822c2c71ae6255b9010a98e3080cee7296b32834d2089d0d75b310b4"
+  }
+}

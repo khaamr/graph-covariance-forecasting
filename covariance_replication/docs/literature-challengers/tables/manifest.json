@@ -1,0 +1,41 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "primary": "Factor-regularized ridge log-HAR",
+    "refit": "monthly",
+    "history": 1000,
+    "ridge_grid": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "ridge_selection": "last 126 past labels, fitted on preceding labels; mean per-series Gaussian QLIKE, then refit full history",
+    "features": "Own, market and sector log-variance disjoint HAR lags; include leave-one-out market and sector features",
+    "retransformation": "Per-asset training-residual exponential smearing",
+    "correlation_target": "rank-three factor projection of past-126 reference-session EWMA realized correlations, half-life 20; monthly eigenvectors from preceding 252 retained observed correlation matrices; residual diagonal floor 0.05; normalize diagonal",
+    "primary_correlation": "Equal convex blend of factor correlation target and causal Log/Fisher GHAR correlation forecast",
+    "controls": [
+      "Ridge log-HAR + original Log/Fisher graph correlation",
+      "Ridge log-HAR + factor correlation",
+      "Log/Fisher graph variance + factor blend",
+      "Log/Fisher graph variance + factor correlation",
+      "Multivariate ridge log-HAR + factor blend"
+    ],
+    "multivariate_control": "All stock log-variance HAR features, same causal ridge CV and smearing",
+    "evaluation": "Exactly same 642 dates as previous experiment; 245 development and 397 reused later dates",
+    "iteration_rule": "Freeze this study before evaluating outputs; retain all challengers and failures; no test-outcome-driven retuning",
+    "uncertainty": "paired stationary bootstrap 10000 draws mean block10 seed20261127; exploratory reused-data inference"
+  },
+  "config_sha256": "fa2ed64bdf16f3b7efaab80a0fe14485c87083ea61e3e429b266e86a0564cbef",
+  "input_sha256": {
+    "panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-joint-pool/experts/experts.npz": "12c6f588b276bab180658c68335a4c06f4408e5750df803ea125af6323ba510e",
+    "/private/tmp/graph-cov-joint-pool/run/forecasts.npz": "54a3d55e5d67ced4d24b57a9ca3b2141ab710d837fa9c2e4e9f31e1253ea3e32"
+  },
+  "source_sha256": {
+    "literature_models.py": "618c4b97443338e6c31dfef1070ceb648ba4effdf27accbb26fab94279caa44f",
+    "run_literature.py": "76abcb0a0bf020398eb5b3b7b98c50fe83d4bfc30e0bab2dc838b0d89a77340e"
+  }
+}

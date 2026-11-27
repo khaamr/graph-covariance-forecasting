@@ -1,0 +1,4 @@
+driver,max_relative_gap,fallbacks,max_iterations
+yesterday covariance,5.027603458327125e-15,0,28
+covariance half-life2,3.0422729801791707e-15,0,27
+covariance half-life5,3.4221779919503366e-15,0,27

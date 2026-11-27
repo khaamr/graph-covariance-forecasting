@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-27",
+  "primary": "Realized DCC-HEAVY M",
+  "lookback": 1000,
+  "refit": "monthly for HEAVY; daily for factor corrections",
+  "heavy_variance": "Free-intercept stationary realized-variance HEAVY recursion; Gaussian/Wishart univariate QLIKE fitting",
+  "heavy_correlation": "Published realized-correlation recursion and two-step Wishart QLIKE; empirical realized-correlation target",
+  "calendar": "Exact linear multi-step conditional-mean propagation across missing reference sessions",
+  "factor_controls": [
+    "Raw-input factor LASSO/adaLASSO",
+    "Raw-input factor with empirical matrix smearing and beta-error second moment, LASSO/adaLASSO"
+  ],
+  "component_controls": [
+    "HEAVY variance + original Log/Fisher graph correlation",
+    "Ridge log-HAR variance + HEAVY correlation"
+  ],
+  "smearing": "Average matrix exponential after adding paired empirical training residual matrices; all training residuals, no selected draw subset",
+  "evaluation": "Same 642 common dates; raw targets, frozen prior17models; 397 reused later dates",
+  "bootstrap": {
+    "draws": 10000,
+    "mean_block": 10,
+    "seed": 20261127
+  },
+  "iteration_rule": "Fix correction mechanisms before evaluating any new challenger; preserve original paper implementations and all failures; no outcome-driven retuning",
+  "qualification": "New exploratory diagnostic repair study on reused data; corrected variants are extensions, not claims about original-paper results."
+}

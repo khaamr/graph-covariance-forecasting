@@ -1,0 +1,15 @@
+{
+  "later_origins": 397,
+  "later_flagged": 5,
+  "whole_panel_flagged": 24,
+  "same_day_structural_relative_frobenius": 0.3063173949748647,
+  "cleaned_to_raw_mean_trace_later": 0.9013856729350004,
+  "flagged_dates": [
+    "2025-04-04",
+    "2025-04-07",
+    "2025-04-08",
+    "2025-04-09",
+    "2025-04-10"
+  ],
+  "qualification": "Same-day realized decompositions diagnose structural approximation only. They are not forecasts or admissible oracle model inputs."
+}

@@ -1,0 +1,21 @@
+model,endpoint,change_percent,lower_95,upper_95
+Integrated-risk reconciled selector,Euclidean,-3.8259481110333393,-7.8802404928904375,-0.49834115093411524
+Integrated-risk reconciled selector,Frobenius,-4.15345431162314,-8.3220635724679,-0.763021125588673
+Integrated-risk reconciled selector,QLIKE,-1.1706668423759226,-1.7638682840347197,-0.6852076895668607
+Integrated-risk reconciled selector,Long-only portfolio variance,2.7099849361015727,-3.751547147742728,7.429541729742345
+Return-risk reconciled selector,Euclidean,-3.261774379622595,-7.0053820845967465,-0.14971375626226555
+Return-risk reconciled selector,Frobenius,-3.577994477072577,-7.430462288822051,-0.44497603449309997
+Return-risk reconciled selector,QLIKE,-1.1839578846638443,-1.8310364613466557,-0.6638393450437724
+Return-risk reconciled selector,Long-only portfolio variance,4.778210771887204,-2.068435010725864,9.640699565004754
+Combined-risk reconciled selector,Euclidean,-3.3947093658404204,-7.1038926865789405,-0.32625983721190466
+Combined-risk reconciled selector,Frobenius,-3.685450321322703,-7.560272138326963,-0.569960964503503
+Combined-risk reconciled selector,QLIKE,-1.1993826857467749,-1.8410339980679602,-0.6817170060161544
+Combined-risk reconciled selector,Long-only portfolio variance,4.579831601745266,-2.290270619728718,9.4753361155745
+Fixed KL covariance reconciliation,Euclidean,-3.9517392755014424,-8.217247869898785,-0.654640943570836
+Fixed KL covariance reconciliation,Frobenius,-4.346881581574169,-8.849119527654366,-0.9060816498733089
+Fixed KL covariance reconciliation,QLIKE,-1.1739827755784304,-1.7508348025920277,-0.7012081560458224
+Fixed KL covariance reconciliation,Long-only portfolio variance,6.898570173394147,-4.24959381059919,15.363048525247894
+Exploratory balanced reconciled candidate,Euclidean,-2.5712986511156277,-5.302221319454732,-0.31751455189699845
+Exploratory balanced reconciled candidate,Frobenius,-2.8267875975929613,-5.633271391912621,-0.5729741611409076
+Exploratory balanced reconciled candidate,QLIKE,-1.1821068753908426,-1.820115324130723,-0.6665733165269498
+Exploratory balanced reconciled candidate,Long-only portfolio variance,-3.6001483522315247,-6.800753889853526,1.5683408512871704

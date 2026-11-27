@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-27",
+  "primary": "Factor-regularized ridge log-HAR",
+  "refit": "monthly",
+  "history": 1000,
+  "ridge_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "ridge_selection": "last 126 past labels, fitted on preceding labels; mean per-series Gaussian QLIKE, then refit full history",
+  "features": "Own, market and sector log-variance disjoint HAR lags; include leave-one-out market and sector features",
+  "retransformation": "Per-asset training-residual exponential smearing",
+  "correlation_target": "rank-three factor projection of past-126 reference-session EWMA realized correlations, half-life 20; monthly eigenvectors from preceding 252 retained observed correlation matrices; residual diagonal floor 0.05; normalize diagonal",
+  "primary_correlation": "Equal convex blend of factor correlation target and causal Log/Fisher GHAR correlation forecast",
+  "controls": [
+    "Ridge log-HAR + original Log/Fisher graph correlation",
+    "Ridge log-HAR + factor correlation",
+    "Log/Fisher graph variance + factor blend",
+    "Log/Fisher graph variance + factor correlation",
+    "Multivariate ridge log-HAR + factor blend"
+  ],
+  "multivariate_control": "All stock log-variance HAR features, same causal ridge CV and smearing",
+  "evaluation": "Exactly same 642 dates as previous experiment; 245 development and 397 reused later dates",
+  "iteration_rule": "Freeze this study before evaluating outputs; retain all challengers and failures; no test-outcome-driven retuning",
+  "uncertainty": "paired stationary bootstrap 10000 draws mean block10 seed20261127; exploratory reused-data inference"
+}

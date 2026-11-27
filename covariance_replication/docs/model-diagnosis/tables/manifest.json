@@ -1,0 +1,39 @@
+{
+  "config": {
+    "date": "2026-11-27",
+    "primary": "Realized DCC-HEAVY M",
+    "lookback": 1000,
+    "refit": "monthly for HEAVY; daily for factor corrections",
+    "heavy_variance": "Free-intercept stationary realized-variance HEAVY recursion; Gaussian/Wishart univariate QLIKE fitting",
+    "heavy_correlation": "Published realized-correlation recursion and two-step Wishart QLIKE; empirical realized-correlation target",
+    "calendar": "Exact linear multi-step conditional-mean propagation across missing reference sessions",
+    "factor_controls": [
+      "Raw-input factor LASSO/adaLASSO",
+      "Raw-input factor with empirical matrix smearing and beta-error second moment, LASSO/adaLASSO"
+    ],
+    "component_controls": [
+      "HEAVY variance + original Log/Fisher graph correlation",
+      "Ridge log-HAR variance + HEAVY correlation"
+    ],
+    "smearing": "Average matrix exponential after adding paired empirical training residual matrices; all training residuals, no selected draw subset",
+    "evaluation": "Same 642 common dates; raw targets, frozen prior17models; 397 reused later dates",
+    "bootstrap": {
+      "draws": 10000,
+      "mean_block": 10,
+      "seed": 20261127
+    },
+    "iteration_rule": "Fix correction mechanisms before evaluating any new challenger; preserve original paper implementations and all failures; no outcome-driven retuning",
+    "qualification": "New exploratory diagnostic repair study on reused data; corrected variants are extensions, not claims about original-paper results."
+  },
+  "source_sha256": {
+    "factor_vhar.py": "2e64ba07f0172c0babf2c384d0fad7834515a73880c3f284509ec645a52bf420",
+    "realized_heavy.py": "440fa83841e18463060f20db4de7fb7f03fb37c397d0e75b231a2fee127442ae",
+    "run_diagnosis_repairs.py": "ac56496f588bcce8f018f1fc62516a23b8a3f455bbc1e20a611f73dcee26166e"
+  },
+  "input_sha256": {
+    "/private/tmp/graph-cov-literature/panel.npz": "653e65d8a6a6686072dc25aac0920b79271ee148ca598e34e08e5b5b12d753de",
+    "/private/tmp/graph-cov-published/run/forecasts.npz": "76292f47974e50e1212527d3c45f0c82cf14ddeecabbc0abfe64583daf0517ae",
+    "/private/tmp/graph-cov-published/run/portfolio-weights.npz": "b826523f89bb0495e2ccc3322928a2bce12954eae9adc65dd24a6a8563817c5a",
+    "design.json": "31fde0c8f4a2fb11db00191d294938db55476aae86fafd3b2a55dfa5703e5eae"
+  }
+}
