@@ -1,0 +1,33 @@
+{
+  "completed_local_date": "2026-11-27",
+  "timezone": "Europe/Istanbul",
+  "checks_passed": 31,
+  "test_modules": [
+    "test_replication",
+    "test_audit",
+    "test_calendar_filter",
+    "test_lobster_validation",
+    "test_extension"
+  ],
+  "default_real_data_ratio_max_absolute_change": 2.55351295663786e-15,
+  "source_sha256": {
+    "models.py": "55c8954abc81a7aff6510e5c5fc9dd4d26c9f5aa192698a2f920cb9ed838a4b6",
+    "market_data.py": "0538ef1c975c4150cd2a8eea7f679ac8d46b455beca42271c6d54d17e289f770",
+    "validate_lobster.py": "1ac2cb6944be24186406cb707bced8d06a6907756843aa7cfa289d9bf437a701",
+    "calendar_sensitivity.py": "3e8ab3fbeb3b7c202eebdf355c01d0e022d5515c1c6713d7eeaab09570077816",
+    "calendar_safe_replication.py": "070b5e6c82bafd5e96c7a15ee4ad50c4383cfe5df58d8059d5ae1bc16fde84ac",
+    "tests/test_calendar_filter.py": "e863fe0aa86fa98b8dcb119ecf04ef07fd00a0f5e98f43bd5cd40e8eea905fab",
+    "tests/test_lobster_validation.py": "d76f402a8d8310279cc3b9c274e5396bbb730b23c75a8453064ab2809e40baa0"
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4",
+    "cvxpy": "1.6.5",
+    "osqp": "1.0.4",
+    "pyarrow": "20.0.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

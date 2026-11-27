@@ -1,0 +1,58 @@
+{
+  "date": "2012-06-21",
+  "symbols": [
+    "AAPL",
+    "INTC",
+    "MSFT"
+  ],
+  "session": "09:30-16:00 America/New_York",
+  "opening_policy": "first observed quote within one second, recorded explicitly; no exact 09:30 quote is available",
+  "archives": {
+    "AAPL": {
+      "sha256": "326839316d67d7819ca0541ffdf73cdb044d6ae4105cce0ef9c615e8848e9d43",
+      "raw_rows": 400391,
+      "usable_top_quote_rows": 400391,
+      "opening_proxy": true,
+      "opening_delay_seconds": 0.004241176,
+      "max_nonopening_quote_age_seconds": 5.385825807
+    },
+    "INTC": {
+      "sha256": "327121717467df0050654ba8a76e490d4dfe5a454a166294ace59b7e0877dff6",
+      "raw_rows": 624040,
+      "usable_top_quote_rows": 624040,
+      "opening_proxy": true,
+      "opening_delay_seconds": 0.005742728,
+      "max_nonopening_quote_age_seconds": 3.897633286
+    },
+    "MSFT": {
+      "sha256": "0825e00ec83cb8ac8b53fd1efb7f2138b7848659e625c49621ebd9b55757be4c",
+      "raw_rows": 668765,
+      "usable_top_quote_rows": 668765,
+      "opening_proxy": true,
+      "opening_delay_seconds": 0.01399412,
+      "max_nonopening_quote_age_seconds": 4.078534462
+    }
+  },
+  "minute_adapter_max_price_error": 3.552713678800501e-15,
+  "covariance_max_absolute_error": 3.1308289294429414e-14,
+  "quarticity_max_absolute_error": 1.9273471707492718e-13,
+  "minimum_covariance_eigenvalue": 0.4108508562314481,
+  "covariance_percent_squared": [
+    [
+      0.6880852705979714,
+      0.5004614486424764,
+      0.6052837638883397
+    ],
+    [
+      0.5004614486424764,
+      1.5958257258139712,
+      0.9892318202065511
+    ],
+    [
+      0.6052837638883397,
+      0.9892318202065511,
+      1.7703527749214534
+    ]
+  ],
+  "scope": "One-day measurement validation only; not a forecasting replication."
+}

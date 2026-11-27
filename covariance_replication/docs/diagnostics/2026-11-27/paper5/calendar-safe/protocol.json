@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "main_levels_monthly": {},
+    "appendix_E_log_fisher_monthly": {
+      "transformation": "log_fisher"
+    }
+  },
+  "horizons": [
+    1
+  ],
+  "lookback_retained_sessions": 1000,
+  "source_period": [
+    "2016-01-04",
+    "2024-12-31"
+  ],
+  "intercept": "series",
+  "inverse_transforms": "exp/tanh, no bias correction; transform before temporal/graph aggregation",
+  "weekly_definition": "five retained forecast sessions anchored to the common first date",
+  "calendar_mode": "complete lag/target windows on screened SPY calendar",
+  "MCS": {
+    "draws": 10000,
+    "block": 2,
+    "seed": 4274989
+  },
+  "source_sha256": {
+    "models.py": "81e71003c5617fced021a8ccb058130770da214fc6c310d4717ef7767097f3bb",
+    "market_data.py": "0538ef1c975c4150cd2a8eea7f679ac8d46b455beca42271c6d54d17e289f770"
+  },
+  "scope": "Existing public evaluation sample reused for diagnosis; not fresh confirmation."
+}

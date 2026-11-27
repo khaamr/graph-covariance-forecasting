@@ -1,0 +1,20 @@
+{
+  "seeds": [
+    11,
+    27,
+    41
+  ],
+  "historical_removal_probability": 0.4,
+  "reference_window_sessions": 400,
+  "input_period": [
+    "2022-01-01",
+    "2024-12-31"
+  ],
+  "test_start": "2024-01-02",
+  "test_end": "2024-12-31",
+  "test_origins": 249,
+  "density_reference": "screened SPY input calendar, not a complete exchange calendar",
+  "paired_controls": "identical training targets/rows, graphs, dates, model formulas and fit windows",
+  "difference": "complete past covariance observations versus row-compressed lag histories",
+  "scope": "Artificial deletion sensitivity; cannot estimate the causal effect of original missing data or reproduce the paper."
+}

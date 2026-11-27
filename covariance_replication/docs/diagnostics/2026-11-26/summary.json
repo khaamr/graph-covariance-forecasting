@@ -1,0 +1,144 @@
+{
+  "reference_calendar": "screened SPY sessions; gaps are lower bounds",
+  "implementation_sha256": {
+    "models.py": "e90224ac17213186727493cc3421ffd42d4f4c528b43ac86d9cae087ead7ef97",
+    "market_data.py": "0538ef1c975c4150cd2a8eea7f679ac8d46b455beca42271c6d54d17e289f770"
+  },
+  "first_forecast": "2022-07-01",
+  "first_training_feature": "2016-03-03",
+  "origins": 623,
+  "first_fold_lag_spans": {
+    "1": {
+      "median_reference_sessions": 1.0,
+      "max_reference_sessions": 14,
+      "affected_training_rows": 293
+    },
+    "5": {
+      "median_reference_sessions": 7.0,
+      "max_reference_sessions": 26,
+      "affected_training_rows": 657
+    },
+    "22": {
+      "median_reference_sessions": 34.0,
+      "max_reference_sessions": 67,
+      "affected_training_rows": 792
+    }
+  },
+  "first_fold_complete_22_session_training_rows": 208,
+  "missing_spy_sessions_before_2022_by_stock": {
+    "HON": 185,
+    "MMM": 171,
+    "AXP": 147,
+    "PG": 66,
+    "HD": 60,
+    "MRK": 57,
+    "TRV": 35,
+    "DIS": 33,
+    "CVX": 28,
+    "CRM": 26,
+    "UNH": 21,
+    "BA": 11,
+    "IBM": 10,
+    "MCD": 10,
+    "NKE": 9,
+    "CAT": 6,
+    "VZ": 5,
+    "WMT": 5,
+    "JNJ": 5,
+    "GS": 5,
+    "KO": 4,
+    "JPM": 4,
+    "MSFT": 3,
+    "INTC": 3,
+    "CSCO": 3,
+    "AMGN": 3,
+    "AAPL": 2
+  },
+  "ordering_ratios": {
+    "sector": {
+      "Euclidean": 0.9375970299640063,
+      "Frobenius": 0.9387582771043564,
+      "QLIKE": 1.078984952072737
+    },
+    "alphabetical": {
+      "Euclidean": 0.9357189506057086,
+      "Frobenius": 0.9376232262627543,
+      "QLIKE": 1.0897852023976256
+    },
+    "reversed": {
+      "Euclidean": 0.9443290483322987,
+      "Frobenius": 0.9448345006709711,
+      "QLIKE": 1.083875027425376
+    }
+  },
+  "scoring_only_exclusion_2023_01_24_and_25": {
+    "HAR-Cholesky": {
+      "Euclidean": 0.9443972279724554,
+      "Frobenius": 0.9440365395053623,
+      "QLIKE": 1.0721689514375121
+    },
+    "HAR-DRD": {
+      "Euclidean": 1.0,
+      "Frobenius": 1.0,
+      "QLIKE": 1.0
+    },
+    "GHAR(-,K)": {
+      "Euclidean": 1.0013607489673364,
+      "Frobenius": 1.0009297249804476,
+      "QLIKE": 0.9906926515769604
+    },
+    "GHAR(-,L)": {
+      "Euclidean": 0.9983822245209055,
+      "Frobenius": 0.997152335662101,
+      "QLIKE": 0.9860199796080187
+    },
+    "GHAR(S,-)": {
+      "Euclidean": 0.9944947705160869,
+      "Frobenius": 0.9959170662690465,
+      "QLIKE": 1.0001911791287925
+    },
+    "GHAR(S,K)": {
+      "Euclidean": 0.9957390852552658,
+      "Frobenius": 0.996678363547456,
+      "QLIKE": 0.9901710822265642
+    },
+    "GHAR(S,L)": {
+      "Euclidean": 0.9931130457970809,
+      "Frobenius": 0.9933605782258463,
+      "QLIKE": 0.9854861338349162
+    },
+    "GHAR(K,-)": {
+      "Euclidean": 0.9870892059876416,
+      "Frobenius": 0.9897953833431525,
+      "QLIKE": 0.9995879754880934
+    },
+    "GHAR(K,K)": {
+      "Euclidean": 0.9880622692979284,
+      "Frobenius": 0.9901923241418585,
+      "QLIKE": 0.9888535516587933
+    },
+    "GHAR(K,L)": {
+      "Euclidean": 0.9859637816355777,
+      "Frobenius": 0.9875594470505101,
+      "QLIKE": 0.9840231158318019
+    },
+    "GHAR(GL,-)": {
+      "Euclidean": 0.9864779897819969,
+      "Frobenius": 0.9894781835772652,
+      "QLIKE": 0.9995547689089463
+    },
+    "GHAR(GL,K)": {
+      "Euclidean": 0.9871761827286822,
+      "Frobenius": 0.9895346639091663,
+      "QLIKE": 0.9890569089435869
+    },
+    "GHAR(GL,L)": {
+      "Euclidean": 0.9853038454593684,
+      "Frobenius": 0.9871921804101074,
+      "QLIKE": 0.9841591312025197
+    }
+  },
+  "scoring_exclusion_warning": "Training and predictors are unchanged; not a corrected backtest.",
+  "glasso_penalty_increased_months": 0,
+  "correlation_repairs": 0
+}

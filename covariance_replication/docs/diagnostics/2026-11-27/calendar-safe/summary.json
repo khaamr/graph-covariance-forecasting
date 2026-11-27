@@ -1,0 +1,16 @@
+{
+  "origins": 623,
+  "forecast_dates_and_targets_match": true,
+  "glasso_graphs_match": true,
+  "reference": "screened SPY sessions; not a complete exchange calendar",
+  "original_training_labels": [
+    1000,
+    1000
+  ],
+  "screened_training_labels": [
+    208,
+    773
+  ],
+  "calibration_window": "same rolling 1000 retained rows; screening reduces usable training labels",
+  "scope": "Calendar sensitivity only, not a reproduction of the paper data/protocol."
+}
