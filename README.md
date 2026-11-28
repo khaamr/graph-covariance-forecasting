@@ -70,5 +70,3 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 ```
-
-Open a notebook using that environment. The first run caches about 0.5 GB of minute bars. Run `python export_figures.py` from the same folder to rebuild the interactive dashboard from saved notebook outputs.
